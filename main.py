@@ -1,5 +1,4 @@
 import asyncio
-from lib2to3.pgen2.token import NAME
 import logging
 import os
 import json
