@@ -5,6 +5,8 @@ import aiohttp
 import copy
 import asyncio
 
+from git import Repo
+
 # DOWNLOAD CHUNK SIZE
 CHUNK_SIZE = 5 * 2**20
 RETRY_MAX = 10
@@ -93,3 +95,12 @@ async def save_data(data: dict, filename: str, delete_key: list = []) -> None:
     with open(os.path.join("exports", "data", filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(_data, ensure_ascii=False, indent=4))
     LOGGER.debug(f"{filename} saved")
+
+async def push_to_github(commit: str = "") -> None:
+    repo = Repo("./")
+    repo.git.add(["./exports/**/*.json"])
+    repo.index.commit(commit)
+    origin = repo.remote(name='origin')
+    origin.push()
+
+    LOGGER.info("Pushed to GitHub")

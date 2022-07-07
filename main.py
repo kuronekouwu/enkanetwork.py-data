@@ -8,6 +8,7 @@ from dotenv import load_dotenv
 from utils import (
     request,
     download_json,
+    push_to_github,
     load_commit_local,
     save_commit_local,
     save_data
@@ -17,6 +18,7 @@ from utils import (
 load_dotenv()
 
 # API GitHub
+GITHUB_SITE = "https://github.com/{PATH}"
 GITHUB = "https://api.github.com/{PATH}"
 RAW_GITHUB = "https://raw.githubusercontent.com/{PATH}"
 
@@ -73,6 +75,7 @@ async def main():
     LOGGER.debug(f"Checking last commit on GitHub...")
     if len(response) > 0:
         last_commit = response[0]["sha"]
+        last_message = response[0]["commit"]["message"]
         LOGGER.debug(f"Last commit on GitHub: {last_commit}")
     else:
         LOGGER.debug("No commits found on GitHub...")
@@ -86,27 +89,27 @@ async def main():
 
     LOGGER.debug(f"New commit found on GitHub")
 
-    # for key in ENVKEY:
-    #     filename = os.getenv(key)
-    #     if not filename:
-    #         LOGGER.error(f"{key} not found in .env")
-    #         continue
+    for key in ENVKEY:
+        filename = os.getenv(key)
+        if not filename:
+            LOGGER.error(f"{key} not found in .env")
+            continue
 
-    #     await download_json(
-    #         url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
-    #         filename=filename, 
-    #         path=os.path.join("raw", "data")
-    #     )
+        await download_json(
+            url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
+            filename=filename, 
+            path=os.path.join("raw", "data")
+        )
 
-    # await asyncio.sleep(1)
+    await asyncio.sleep(1)
 
-    # langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
-    # for lang in langPath:
-    #     await download_json(
-    #         url=lang["download_url"],
-    #         filename=lang["name"],
-    #         path=os.path.join("raw", "langs")
-    #     )
+    langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
+    for lang in langPath:
+        await download_json(
+            url=lang["download_url"],
+            filename=lang["name"],
+            path=os.path.join("raw", "langs")
+        )
 
     # Load langs 
     for lang in os.listdir(os.path.join("raw", "langs")):
@@ -268,6 +271,11 @@ async def main():
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
         await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_prop"] else True)  
 
+    # Push to github
+    await push_to_github(f"""{last_message}
+- SHA: {last_commit}
+- URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
+    """)
 
     # Save lastest commit
     LOGGER.debug(f"Saving lastest commit...")
