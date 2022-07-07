@@ -12,7 +12,8 @@ Yon cane see in [exports](./exports/) folder.
 
 ## ❓ How do I know this repo has been updated?
 In every 00:00 (UTC+7) data will fetch last commit from [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) 
-and check if commit is different from last commit. If diff
+and check if commit is different from last commit. If different, it will update data take a 3 - 5 minutes to update data.
+
 
 ## ❓ Can I use this repo for something else?
 Sure.
