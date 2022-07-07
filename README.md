@@ -16,6 +16,7 @@ Sure.
 
 ## ❓ How to join character data?
 You can see in picture this:
+
 ![LINKING CHARACTER](./CHARACTERS.png)
 
 # Enjoy
