@@ -42,14 +42,7 @@ ENVKEY = [
 
 LANGS = {}
 DATA = {}
-
 SKILLS_DEPOT = {}
-SKILLS_DATA = {}
-CONSTELLATIONS = {}
-ARTIFACTS = {}
-WEAPONS = {}
-FIGHT_PROPS = {}
-NAMECARDS = {}
 
 async def create_lang(data: dict, filename: str = "", has_key_name_hash: bool = True):
     DATA = {}
@@ -71,6 +64,8 @@ async def create_lang(data: dict, filename: str = "", has_key_name_hash: bool = 
         f.write(json.dumps(DATA, ensure_ascii=False, indent=4))
 
 async def main():
+    EXPORT_DATA = {}
+
     LOGGER.debug(f"Fetching commits from GitHub [{USERNAME}/{REPOSITORY}]")
     response = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/commits"))
     
@@ -91,40 +86,43 @@ async def main():
 
     LOGGER.debug(f"New commit found on GitHub")
 
-    for key in ENVKEY:
-        filename = os.getenv(key)
-        if not filename:
-            LOGGER.error(f"{key} not found in .env")
-            continue
+    # for key in ENVKEY:
+    #     filename = os.getenv(key)
+    #     if not filename:
+    #         LOGGER.error(f"{key} not found in .env")
+    #         continue
 
-        await download_json(
-            url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
-            filename=filename, 
-            path=os.path.join("raw", "data")
-        )
+    #     await download_json(
+    #         url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
+    #         filename=filename, 
+    #         path=os.path.join("raw", "data")
+    #     )
 
-    await asyncio.sleep(1)
+    # await asyncio.sleep(1)
 
-    langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
-    for lang in langPath:
-        await download_json(
-            url=lang["download_url"],
-            filename=lang["name"],
-            path=os.path.join("raw", "langs")
-        )
+    # langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
+    # for lang in langPath:
+    #     await download_json(
+    #         url=lang["download_url"],
+    #         filename=lang["name"],
+    #         path=os.path.join("raw", "langs")
+    #     )
 
     # Load langs 
     for lang in os.listdir(os.path.join("raw", "langs")):
-        with open(os.path.join("raw", "langs", lang), "r", encoding="utf-8") as f:
-            _lang = lang.split(".")[0].replace("TextMap", "")
-            LOGGER.debug(f"Loading {_lang}...")
-            LANGS[_lang] = json.loads(f.read())
+        if lang.endswith(".json"):
+            with open(os.path.join("raw", "langs", lang), "r", encoding="utf-8") as f:
+                _lang = lang.split(".")[0].replace("TextMap", "")
+                LOGGER.debug(f"Loading lang ({_lang})...")
+                LANGS[_lang] = json.loads(f.read())
 
     # Load data 
     for data in os.listdir(os.path.join("raw", "data")):
-        with open(os.path.join("raw", "data", data), "r", encoding="utf-8") as f:
-            LOGGER.debug(f"Loading {data}...")
-            DATA[data.split(".")[0]] = json.loads(f.read())
+        if data.endswith(".json"):
+            with open(os.path.join("raw", "data", data), "r", encoding="utf-8") as f:
+                _key = data.split(".")[0]
+                LOGGER.debug(f"Loading data ({_key})...")
+                DATA[data.split(".")[0]] = json.loads(f.read())
 
     # Load skills data
     for skillData in DATA["AvatarSkillExcelConfigData"]:
@@ -133,32 +131,35 @@ async def main():
             LOGGER.debug(f"Skill {skillData['id']} has no icon... Skipping...")
             continue
 
-        SKILLS_DATA[skillData["id"]] = {
+        if not "skills" in EXPORT_DATA:
+            EXPORT_DATA["skills"] = {}
+
+        EXPORT_DATA["skills"][skillData["id"]] = {
             "nameTextMapHash": skillData["nameTextMapHash"],
             "skillIcon": skillData["skillIcon"],
             "costElemType": skillData.get("costElemType", ""),
         }
 
-    await save_data(SKILLS_DATA, "skills.json", ["costElemType"])
-    await create_lang(SKILLS_DATA, "skills.json")
-
     # Load constellations
     for talent in DATA["AvatarTalentExcelConfigData"]:
         LOGGER.debug(f"Getting constellations {talent['talentId']}...")
+        
+        if not "constellations" in EXPORT_DATA:
+            EXPORT_DATA["constellations"] = {}
 
-        CONSTELLATIONS[talent["talentId"]] = {
+        EXPORT_DATA["constellations"][talent["talentId"]] = {
             "nameTextMapHash": talent["nameTextMapHash"],
             "icon": talent["icon"]
         }
-
-    await save_data(CONSTELLATIONS, "constellations.json")
-    await create_lang(CONSTELLATIONS, "constellations.json")
 
     # Load artifacts
     for artifact in DATA["ReliquaryExcelConfigData"]:
         LOGGER.debug(f"Getting artifact {artifact['id']}...")
 
-        ARTIFACTS[artifact["id"]] = {
+        if not "artifacts" in EXPORT_DATA:
+            EXPORT_DATA["artifacts"] = {}
+            
+        EXPORT_DATA["artifacts"][artifact["id"]] = {
             "nameTextMapHash": artifact["nameTextMapHash"],
             "itemType": artifact["itemType"],
             "equipType": artifact["equipType"],
@@ -167,56 +168,53 @@ async def main():
             "mainPropDepotId": artifact["mainPropDepotId"],
             "appendPropDepotId": artifact["appendPropDepotId"],
         }
-
-    await save_data(ARTIFACTS, "artifacts.json")
-    await create_lang(ARTIFACTS, "artifacts.json")
-
+        
     # Load weapons
     for weapon in DATA["WeaponExcelConfigData"]:
         LOGGER.debug(f"Getting weapon {weapon['id']}...")
 
-        WEAPONS[weapon["id"]] = {
+        if not "weapons" in EXPORT_DATA:
+            EXPORT_DATA["weapons"] = {}
+
+        EXPORT_DATA["weapons"][weapon["id"]] = {
             "nameTextMapHash": weapon["nameTextMapHash"],
             "icon": weapon["icon"],
             "awakenIcon": weapon["awakenIcon"],
             "rankLevel": weapon["rankLevel"]
         }
-            
-    await save_data(WEAPONS, "weapons.json")
-    await create_lang(WEAPONS, "weapons.json")
     
     # Load namecard
     for namecard in filter(lambda a: "materialType" in a and a["materialType"] == "MATERIAL_NAMECARD", DATA["MaterialExcelConfigData"]):
         LOGGER.debug(f"Getting namecard {namecard['id']}...")
 
-        NAMECARDS[namecard["id"]] = {
+        if not "namecards" in EXPORT_DATA:
+            EXPORT_DATA["namecards"] = {}
+
+        EXPORT_DATA["namecards"][namecard["id"]] = {
             "nameTextMapHash": namecard["nameTextMapHash"],
             "icon": namecard["icon"],
             "picPath": namecard["picPath"],
             "rankLevel": namecard["rankLevel"],
             "materialType": namecard["materialType"],
         }
-    
-    await save_data(NAMECARDS, "namecards.json")
-    await create_lang(NAMECARDS, "namecards.json")
-
 
     # Load fight props
     for fight_prop in filter(lambda a: a['textMapId'].startswith("FIGHT_PROP"), DATA["ManualTextMapConfigData"]):
         LOGGER.debug(f"Getting FIGHT_PROP {fight_prop['textMapId']}...")
-        FIGHT_PROPS[fight_prop["textMapId"]] = {
+
+        if not "fight_prop" in EXPORT_DATA:
+            EXPORT_DATA["fight_prop"] = {}
+
+        EXPORT_DATA["fight_prop"][fight_prop["textMapId"]] = {
             "nameTextMapHash": fight_prop["textMapContentTextMapHash"],
         }
-        
-    await create_lang(FIGHT_PROPS, "fight_prop.json", False)
 
     # Prepare data (Create language)
     for skillDepot in DATA["AvatarSkillDepotExcelConfigData"]:
         LOGGER.debug(f"Getting skill depot: {skillDepot['id']}...")
         SKILLS_DEPOT[skillDepot["id"]] = skillDepot
-
+        
     # Link data (Avatar)
-    OUTPUT = {}
     for avatar in DATA["AvatarExcelConfigData"]:
         AVATAR = {}
         LOGGER.debug(f"Processing {avatar['id']}...")
@@ -236,7 +234,8 @@ async def main():
         LOGGER.debug(f"Getting skills {avatar['skillDepotId']}")
         depot = SKILLS_DEPOT.get(avatar["skillDepotId"])
         if depot and depot["id"] != 101:
-            energry = SKILLS_DATA.get(depot.get("energySkill"))
+            
+            energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
 
             if energry:
                 LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
@@ -253,11 +252,22 @@ async def main():
             AVATAR.update({
                 "talents": depot["talents"]
             })
-        
-        OUTPUT[avatar["id"]] = AVATAR
 
-    await create_lang(OUTPUT, "characters.json")    
-    await save_data(OUTPUT, "characters.json")
+        if not "characters" in EXPORT_DATA:
+            EXPORT_DATA["characters"] = {}
+        
+        EXPORT_DATA["characters"][avatar["id"]] = AVATAR
+
+    LOGGER.debug("Exporting data...")
+    for key in EXPORT_DATA:
+        _delKey = []
+        if key == "skills":
+            _delKey.append("costElemType")
+
+        LOGGER.debug(f"Exporting {key}...")
+        await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
+        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_prop"] else True)  
+
 
     # Save lastest commit
     LOGGER.debug(f"Saving lastest commit...")

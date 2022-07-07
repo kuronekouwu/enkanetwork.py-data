@@ -3,23 +3,45 @@ import json
 import logging
 import aiohttp
 import copy
+import asyncio
 
 # DOWNLOAD CHUNK SIZE
 CHUNK_SIZE = 5 * 2**20
+RETRY_MAX = 10
 
 LOGGER = logging.getLogger(__name__)
 
+# HEADER 
+HEADER = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36 Edg/103.0.1264.44"
+}
+
 async def request(url: str, method: str = "GET", headers: dict = None, body: str = None) -> dict:
+    _url = url.strip(" ")
     if headers is None:
         headers = {}
     if body is None:
         body = ""
 
+    retry = 0
     async with aiohttp.ClientSession() as session:
-        async with session.request(method, url, headers=headers, data=body) as response:
+        async with session.request(method, _url, headers={**HEADER, **headers}, data=body) as response:
             """
                 From https://gist.github.com/foobarna/19c132304e140bf5031c273f6dc27ece
             """
+
+            while True:
+                if response.status >= 400:
+                    LOGGER.warning(f"Failure to fetch {_url} ({response.status}) Retry {retry} / {RETRY_MAX}")
+                    retry += 1
+                    if retry > RETRY_MAX:
+                        raise Exception(f"Failed to download {url}")
+
+                    await asyncio.sleep(3)
+                    continue
+                
+                break                
+
             data = bytearray()
             data_to_read = True
             while data_to_read:
@@ -34,14 +56,20 @@ async def request(url: str, method: str = "GET", headers: dict = None, body: str
                     data.extend(chunk)
                     red += len(chunk)
 
-            return json.loads(data)
+            try:
+                return json.loads(data)
+            except Exception as e:
+                print(response.status)
+                print(url)
+                print(data)
+                raise e
 
 
 async def download_json(url: str, filename: str, path: str = ".") -> None:
     LOGGER.debug(f"Fetching {filename} from GitHub...")
     response = await request(url)
     with open(os.path.join(path, filename), "w", encoding="utf-8") as f:
-        f.write(json.dumps(response, ensure_ascii=False))
+        f.write(json.dumps(response, ensure_ascii=False, indent=4))
     LOGGER.debug(f"{filename} saved")
 
 async def load_commit_local():
