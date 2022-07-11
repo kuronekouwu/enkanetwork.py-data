@@ -344,6 +344,66 @@
         "CHT": "辰砂之紡錘",
         "PT": "Haste de Cinábrio"
     },
+    "1012170803": {
+        "TH": "Kagotsurube Isshin",
+        "JP": "籠釣瓶一心",
+        "FR": "Kagotsurube Isshin",
+        "ID": "Kagotsurube Isshin",
+        "ES": "Kagotsurube Isshin",
+        "DE": "Kagotsurube Isshin",
+        "EN": "Kagotsurube Isshin",
+        "KR": "카고츠루베 잇신",
+        "RU": "Кагоцурубэ Иссин",
+        "CHS": "笼钓瓶一心",
+        "VI": "Kagotsurube Isshin",
+        "CHT": "籠釣瓶一心",
+        "PT": "Kagotsurube Isshin"
+    },
+    "1499745907": {
+        "TH": "ดาบเลื่องชื่อ \"Isshin Art\"",
+        "JP": "「一心伝」名刀",
+        "FR": "Chef d'œuvre Isshin",
+        "ID": "Prized Isshin Blade",
+        "ES": "Espada Egregia de Isshin",
+        "DE": "Berühmtes Schwert der „Isshin-Schule“",
+        "EN": "Prized Isshin Blade",
+        "KR": "「잇신의 기술」 명검",
+        "RU": "Легендарный клинок Иссин",
+        "CHS": "「一心传」名刀",
+        "VI": "Danh Đao \"Trường Phái Isshin\"",
+        "CHT": "「一心傳」名刀",
+        "PT": "Espada Famosa da \"Arte Isshin\""
+    },
+    "1538092267": {
+        "TH": "ดาบเลื่องชื่อ \"Isshin Art\"",
+        "JP": "「一心伝」名刀",
+        "FR": "Chef d'œuvre Isshin",
+        "ID": "Prized Isshin Blade",
+        "ES": "Espada Egregia de Isshin",
+        "DE": "Berühmtes Schwert der „Isshin-Schule“",
+        "EN": "Prized Isshin Blade",
+        "KR": "「잇신의 기술」 명검",
+        "RU": "Легендарный клинок Иссин",
+        "CHS": "「一心传」名刀",
+        "VI": "Danh Đao \"Trường Phái Isshin\"",
+        "CHT": "「一心傳」名刀",
+        "PT": "Espada Famosa da \"Arte Isshin\""
+    },
+    "3464027035": {
+        "TH": "ดาบเลื่องชื่อ \"Isshin Art\"",
+        "JP": "「一心伝」名刀",
+        "FR": "Chef d'œuvre Isshin",
+        "ID": "Prized Isshin Blade",
+        "ES": "Espada Egregia de Isshin",
+        "DE": "Berühmtes Schwert der „Isshin-Schule“",
+        "EN": "Prized Isshin Blade",
+        "KR": "「잇신의 기술」 명검",
+        "RU": "Легендарный клинок Иссин",
+        "CHS": "「一心传」名刀",
+        "VI": "Danh Đao \"Trường Phái Isshin\"",
+        "CHT": "「一心傳」名刀",
+        "PT": "Espada Famosa da \"Arte Isshin\""
+    },
     "902264035": {
         "TH": "Aquila Favonia",
         "JP": "風鷹剣",
@@ -597,7 +657,7 @@
         "CHS": "以理服人",
         "VI": "Gậy Thu Phục",
         "CHT": "以理服人",
-        "PT": "Porrete da Razão"
+        "PT": "Pacifista"
     },
     "2614170427": {
         "TH": "Skyrider Greatsword",

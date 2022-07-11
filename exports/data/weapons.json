@@ -137,6 +137,30 @@
         "awakenIcon": "UI_EquipIcon_Sword_Opus_Awaken",
         "rankLevel": 4
     },
+    "11416": {
+        "nameTextMapHash": 1012170803,
+        "icon": "UI_EquipIcon_Sword_Youtou",
+        "awakenIcon": "UI_EquipIcon_Sword_Youtou_Awaken",
+        "rankLevel": 4
+    },
+    "11419": {
+        "nameTextMapHash": 1499745907,
+        "icon": "UI_EquipIcon_Sword_YoutouEnchanted",
+        "awakenIcon": "UI_EquipIcon_Sword_YoutouEnchanted",
+        "rankLevel": 4
+    },
+    "11420": {
+        "nameTextMapHash": 1538092267,
+        "icon": "UI_EquipIcon_Sword_YoutouShattered",
+        "awakenIcon": "UI_EquipIcon_Sword_YoutouShattered",
+        "rankLevel": 4
+    },
+    "11421": {
+        "nameTextMapHash": 3464027035,
+        "icon": "UI_EquipIcon_Sword_YoutouEnchanted",
+        "awakenIcon": "UI_EquipIcon_Sword_YoutouEnchanted",
+        "rankLevel": 4
+    },
     "11501": {
         "nameTextMapHash": 902264035,
         "icon": "UI_EquipIcon_Sword_Falcon",

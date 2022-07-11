@@ -28399,7 +28399,7 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_RING",
         "icon": "UI_RelicIcon_15003_1",
-        "rankLevel": 4,
+        "rankLevel": 5,
         "mainPropDepotId": 5099,
         "appendPropDepotId": 964
     },
@@ -28435,8 +28435,8 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_SHOES",
         "icon": "UI_RelicIcon_15003_5",
-        "rankLevel": 4,
-        "mainPropDepotId": 1099,
+        "rankLevel": 5,
+        "mainPropDepotId": 1095,
         "appendPropDepotId": 963
     },
     "23401": {

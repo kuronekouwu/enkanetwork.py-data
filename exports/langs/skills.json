@@ -2835,7 +2835,7 @@
         "PT": ""
     },
     "137786925": {
-        "TH": "โจมตีปกติ - Garyuu Bladework",
+        "TH": "โจมตีปกติ: Garyuu Bladework",
         "JP": "通常攻撃·我流剣術",
         "FR": "Attaque normale : Escrime de Garyuu",
         "ID": "Normal Attack: Garyuu Bladework",
@@ -3405,7 +3405,7 @@
         "PT": "Subjugação: Koukou Sendou"
     },
     "1791467005": {
-        "TH": "โจมตีปกติ - Fight Club Legend",
+        "TH": "โจมตีปกติ: Fight Club Legend",
         "JP": "通常攻撃·喧嘩屋伝説",
         "FR": "Attaque normale : Légende de la baston",
         "ID": "Normal Attack: Fight Club Legend",
@@ -3493,6 +3493,51 @@
         "VI": "Đại Bí Pháp - Tenko Kenshin",
         "CHT": "大密法·天狐顯真",
         "PT": "Grande Arte Secreta: Tenko Kenshin"
+    },
+    "2195671413": {
+        "TH": "โจมตีปกติ: Fudou Style Martial Arts",
+        "JP": "通常攻撃·不動流格闘術",
+        "FR": "Attaque normale : Arts martiaux style Fudou",
+        "ID": "Normal Attack: Fudou Style Martial Arts",
+        "ES": "Ataque Normal: Artes marciales Fudou",
+        "DE": "Standardangriff: Kampf im Fudou-Stil",
+        "EN": "Normal Attack: Fudou Style Martial Arts",
+        "KR": "일반 공격·부동류 격투술",
+        "RU": "Боевой стиль Фудо",
+        "CHS": "普通攻击·不动流格斗术",
+        "VI": "Tấn Công Thường - Võ Thuật Fudou",
+        "CHT": "普通攻擊·不動流格鬥術",
+        "PT": "Ataque Normal: Arte Marcial Fudou"
+    },
+    "3012298293": {
+        "TH": "Heartstopper Strike",
+        "JP": "戮心拳",
+        "FR": "Poing d'arrêt cardiaque",
+        "ID": "Heartstopper Strike",
+        "ES": "Puñetazo cardiaco",
+        "DE": "Faust der Brüderlichkeit",
+        "EN": "Heartstopper Strike",
+        "KR": "쇄심권",
+        "RU": "Убиение сердца",
+        "CHS": "勠心拳",
+        "VI": "Lục Tâm Quyền",
+        "CHT": "勠心拳",
+        "PT": "Soco Cardíaco"
+    },
+    "3584687669": {
+        "TH": "Windmuster Kick",
+        "JP": "廻風蹴",
+        "FR": "Coup de pied ouragan",
+        "ID": "Windmuster Kick",
+        "ES": "Patada huracanada",
+        "DE": "Tritt des konzentrierten Winds",
+        "EN": "Windmuster Kick",
+        "KR": "선풍각",
+        "RU": "Ураганный удар",
+        "CHS": "聚风蹴",
+        "VI": "Tụ Phong Cước",
+        "CHT": "聚風蹴",
+        "PT": "Chute Turbilhão"
     },
     "123614933": {
         "TH": "Lightning Blade",
@@ -4165,6 +4210,36 @@
         "KR": "",
         "RU": "禁用元素战记",
         "CHS": "禁用元素战记",
+        "VI": "",
+        "CHT": "",
+        "PT": ""
+    },
+    "772855381": {
+        "TH": "",
+        "JP": "",
+        "FR": "",
+        "ID": "",
+        "ES": "",
+        "DE": "",
+        "EN": "",
+        "KR": "",
+        "RU": "",
+        "CHS": "禁用菲谢尔元素战技",
+        "VI": "",
+        "CHT": "",
+        "PT": ""
+    },
+    "1636845245": {
+        "TH": "",
+        "JP": "",
+        "FR": "",
+        "ID": "",
+        "ES": "",
+        "DE": "",
+        "EN": "",
+        "KR": "",
+        "RU": "",
+        "CHS": "禁用菲谢尔元素爆发",
         "VI": "",
         "CHT": "",
         "PT": ""
@@ -5905,6 +5980,21 @@
         "KR": "",
         "RU": "",
         "CHS": "荒泷一斗空中攻击",
+        "VI": "",
+        "CHT": "",
+        "PT": ""
+    },
+    "3825685805": {
+        "TH": "",
+        "JP": "",
+        "FR": "",
+        "ID": "",
+        "ES": "",
+        "DE": "",
+        "EN": "",
+        "KR": "",
+        "RU": "",
+        "CHS": "鹿野院平藏空中攻击",
         "VI": "",
         "CHT": "",
         "PT": ""

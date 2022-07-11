@@ -674,6 +674,21 @@
         "CHT": "八重神子",
         "PT": "Yae Miko"
     },
+    "646032090": {
+        "TH": "Shikanoin Heizou",
+        "JP": "鹿野院平蔵",
+        "FR": "Shikanoin Heizou",
+        "ID": "Shikanoin Heizou",
+        "ES": "Shikanoin Heizou",
+        "DE": "Shikanoin Heizou",
+        "EN": "Shikanoin Heizou",
+        "KR": "시카노인 헤이조",
+        "RU": "Хэйдзо",
+        "CHS": "鹿野院平藏",
+        "VI": "Shikanoin Heizou",
+        "CHT": "鹿野院平藏",
+        "PT": "Shikanoin Heizou"
+    },
     "2848374378": {
         "TH": "Yelan",
         "JP": "夜蘭",
@@ -743,7 +758,7 @@
         "DE": "Kuki Shinobu",
         "EN": "Kuki Shinobu",
         "KR": "쿠키 시노부",
-        "RU": "Куки Синобу",
+        "RU": "Синобу",
         "CHS": "久岐忍",
         "VI": "Kuki Shinobu",
         "CHT": "久岐忍",

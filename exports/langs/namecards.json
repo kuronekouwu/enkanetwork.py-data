@@ -1753,5 +1753,35 @@
         "VI": "Nhật Ký Hành Trình - Thiên Mệnh",
         "CHT": "紀行·天命",
         "PT": "Passe de Batalha: Destino"
+    },
+    "1688417908": {
+        "TH": "Shikanoin Heizou - Temari",
+        "JP": "鹿野院平蔵·鞠",
+        "FR": "Shikanoin Heizou - Temari",
+        "ID": "Shikanoin Heizou: Temari",
+        "ES": "Shikanoin Heizou - Temari",
+        "DE": "Shikanoin Heizou – Temari",
+        "EN": "Shikanoin Heizou: Temari",
+        "KR": "시카노인 헤이조·테마리",
+        "RU": "Сиканоин Хэйдзо: Тэмари",
+        "CHS": "鹿野院平藏·鞠毬",
+        "VI": "Shikanoin Heizou - Temari",
+        "CHT": "鹿野院平藏·鞠毬",
+        "PT": "Shikanoin Heizou — Temari"
+    },
+    "2652433876": {
+        "TH": "บันทึก - ทะเลคราม",
+        "JP": "紀行·海藍",
+        "FR": "PB - Azur marin",
+        "ID": "Catatan Perjalanan: Kilau Biru Laut",
+        "ES": "PB - Azul marino",
+        "DE": "Erlebnispass – Meeresblau",
+        "EN": "Travel Notes: Azure Main",
+        "KR": "기행·바닷빛",
+        "RU": "Лазурный берег",
+        "CHS": "纪行·海蓝",
+        "VI": "Nhật Ký Hành Trình - Biển Xanh",
+        "CHT": "紀行·海藍",
+        "PT": "Passe de Batalha — Azul Marinho"
     }
 }
