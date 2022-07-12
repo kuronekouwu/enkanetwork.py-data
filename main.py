@@ -205,10 +205,10 @@ async def main():
     for fight_prop in filter(lambda a: a['textMapId'].startswith("FIGHT_PROP"), DATA["ManualTextMapConfigData"]):
         LOGGER.debug(f"Getting FIGHT_PROP {fight_prop['textMapId']}...")
 
-        if not "fight_prop" in EXPORT_DATA:
-            EXPORT_DATA["fight_prop"] = {}
+        if not "fight_props" in EXPORT_DATA:
+            EXPORT_DATA["fight_props"] = {}
 
-        EXPORT_DATA["fight_prop"][fight_prop["textMapId"]] = {
+        EXPORT_DATA["fight_props"][fight_prop["textMapId"]] = {
             "nameTextMapHash": fight_prop["textMapContentTextMapHash"],
         }
 
@@ -269,7 +269,7 @@ async def main():
 
         LOGGER.debug(f"Exporting {key}...")
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
-        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_prop"] else True)  
+        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
 
     # Push to github
     await push_to_github(f"""{last_message}
