@@ -1,4 +1,4 @@
 last_commit.txt
 raw/data/*.json
-raw/langs/*.json
+raw/lang/*.json
 __pycache__
