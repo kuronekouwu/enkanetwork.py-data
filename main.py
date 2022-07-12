@@ -62,7 +62,7 @@ async def create_lang(data: dict, filename: str = "", has_key_name_hash: bool = 
                     DATA[hashKey] = {}
                 DATA[hashKey][lang] = ""
 
-    with open(os.path.join("exports", "lang", filename), "w", encoding="utf-8") as f:
+    with open(os.path.join("exports", "langs", filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(DATA, ensure_ascii=False, indent=4))
 
 async def main():
@@ -108,13 +108,13 @@ async def main():
         await download_json(
             url=lang["download_url"],
             filename=lang["name"],
-            path=os.path.join("raw", "lang")
+            path=os.path.join("raw", "langs")
         )
 
     # Load langs 
-    for lang in os.listdir(os.path.join("raw", "lang")):
+    for lang in os.listdir(os.path.join("raw", "langs")):
         if lang.endswith(".json"):
-            with open(os.path.join("raw", "lang", lang), "r", encoding="utf-8") as f:
+            with open(os.path.join("raw", "langs", lang), "r", encoding="utf-8") as f:
                 _lang = lang.split(".")[0].replace("TextMap", "")
                 LOGGER.debug(f"Loading lang ({_lang})...")
                 LANGS[_lang] = json.loads(f.read())
@@ -205,10 +205,10 @@ async def main():
     for fight_prop in filter(lambda a: a['textMapId'].startswith("FIGHT_PROP"), DATA["ManualTextMapConfigData"]):
         LOGGER.debug(f"Getting FIGHT_PROP {fight_prop['textMapId']}...")
 
-        if not "fight_props" in EXPORT_DATA:
-            EXPORT_DATA["fight_props"] = {}
+        if not "fight_prop" in EXPORT_DATA:
+            EXPORT_DATA["fight_prop"] = {}
 
-        EXPORT_DATA["fight_props"][fight_prop["textMapId"]] = {
+        EXPORT_DATA["fight_prop"][fight_prop["textMapId"]] = {
             "nameTextMapHash": fight_prop["textMapContentTextMapHash"],
         }
 
@@ -269,7 +269,7 @@ async def main():
 
         LOGGER.debug(f"Exporting {key}...")
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
-        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
+        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_prop"] else True)  
 
     # Push to github
     await push_to_github(f"""{last_message}
