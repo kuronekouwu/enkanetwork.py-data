@@ -271,17 +271,17 @@ async def main():
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
         await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
 
-    # Push to github
-#     await push_to_github(f"""{last_message}
-# - SHA: {last_commit}
-# - URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
-#     """)
+    Push to github
+    await push_to_github(f"""{last_message}
+- SHA: {last_commit}
+- URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
+    """)
 
-#     # Save lastest commit
-#     LOGGER.debug(f"Saving lastest commit...")
-#     await save_commit_local(last_commit)
+    # Save lastest commit
+    LOGGER.debug(f"Saving lastest commit...")
+    await save_commit_local(last_commit)
 
-#     LOGGER.debug(f"Done!")
+    LOGGER.debug(f"Done!")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
