@@ -1,0 +1,155 @@
+{
+    "FIGHT_PROP_BASE_HP": {
+        "nameTextMapHash": 931326071
+    },
+    "FIGHT_PROP_HP": {
+        "nameTextMapHash": 1377450402
+    },
+    "FIGHT_PROP_HP_PERCENT": {
+        "nameTextMapHash": 2404061249
+    },
+    "FIGHT_PROP_BASE_ATTACK": {
+        "nameTextMapHash": 2334963823
+    },
+    "FIGHT_PROP_ATTACK": {
+        "nameTextMapHash": 1756301290
+    },
+    "FIGHT_PROP_ATTACK_PERCENT": {
+        "nameTextMapHash": 4097315912
+    },
+    "FIGHT_PROP_BASE_DEFENSE": {
+        "nameTextMapHash": 466638175
+    },
+    "FIGHT_PROP_DEFENSE": {
+        "nameTextMapHash": 3591287138
+    },
+    "FIGHT_PROP_DEFENSE_PERCENT": {
+        "nameTextMapHash": 527947494
+    },
+    "FIGHT_PROP_BASE_SPEED": {
+        "nameTextMapHash": 4069199863
+    },
+    "FIGHT_PROP_SPEED_PERCENT": {
+        "nameTextMapHash": 573781492
+    },
+    "FIGHT_PROP_CRITICAL": {
+        "nameTextMapHash": 1916797986
+    },
+    "FIGHT_PROP_ANTI_CRITICAL": {
+        "nameTextMapHash": 543419244
+    },
+    "FIGHT_PROP_CRITICAL_HURT": {
+        "nameTextMapHash": 4137936461
+    },
+    "FIGHT_PROP_ELEMENT_MASTERY": {
+        "nameTextMapHash": 3421163681
+    },
+    "FIGHT_PROP_CHARGE_EFFICIENCY": {
+        "nameTextMapHash": 1735465728
+    },
+    "FIGHT_PROP_ADD_HURT": {
+        "nameTextMapHash": 2920451417
+    },
+    "FIGHT_PROP_SUB_HURT": {
+        "nameTextMapHash": 3892469682
+    },
+    "FIGHT_PROP_HEAL_ADD": {
+        "nameTextMapHash": 3911103831
+    },
+    "FIGHT_PROP_HEALED_ADD": {
+        "nameTextMapHash": 3392845215
+    },
+    "FIGHT_PROP_FIRE_ADD_HURT": {
+        "nameTextMapHash": 999734248
+    },
+    "FIGHT_PROP_FIRE_SUB_HURT": {
+        "nameTextMapHash": 570007818
+    },
+    "FIGHT_PROP_WATER_ADD_HURT": {
+        "nameTextMapHash": 3619239513
+    },
+    "FIGHT_PROP_WATER_SUB_HURT": {
+        "nameTextMapHash": 1406081734
+    },
+    "FIGHT_PROP_GRASS_ADD_HURT": {
+        "nameTextMapHash": 1824382851
+    },
+    "FIGHT_PROP_GRASS_SUB_HURT": {
+        "nameTextMapHash": 2809766539
+    },
+    "FIGHT_PROP_ELEC_ADD_HURT": {
+        "nameTextMapHash": 3514877774
+    },
+    "FIGHT_PROP_ELEC_SUB_HURT": {
+        "nameTextMapHash": 1580778495
+    },
+    "FIGHT_PROP_ICE_ADD_HURT": {
+        "nameTextMapHash": 4054347456
+    },
+    "FIGHT_PROP_ICE_SUB_HURT": {
+        "nameTextMapHash": 2221516638
+    },
+    "FIGHT_PROP_WIND_ADD_HURT": {
+        "nameTextMapHash": 312842903
+    },
+    "FIGHT_PROP_WIND_SUB_HURT": {
+        "nameTextMapHash": 675300986
+    },
+    "FIGHT_PROP_PHYSICAL_ADD_HURT": {
+        "nameTextMapHash": 3763864883
+    },
+    "FIGHT_PROP_PHYSICAL_SUB_HURT": {
+        "nameTextMapHash": 2073208032
+    },
+    "FIGHT_PROP_ROCK_ADD_HURT": {
+        "nameTextMapHash": 2557985416
+    },
+    "FIGHT_PROP_ROCK_SUB_HURT": {
+        "nameTextMapHash": 3363551926
+    },
+    "FIGHT_PROP_EFFECT_HIT": {
+        "nameTextMapHash": 3696186953
+    },
+    "FIGHT_PROP_EFFECT_RESIST": {
+        "nameTextMapHash": 1721663817
+    },
+    "FIGHT_PROP_FREEZE_SHORTEN": {
+        "nameTextMapHash": 438866181
+    },
+    "FIGHT_PROP_TORPOR_SHORTEN": {
+        "nameTextMapHash": 1480492966
+    },
+    "FIGHT_PROP_DIZZY_SHORTEN": {
+        "nameTextMapHash": 2646878783
+    },
+    "FIGHT_PROP_MAX_HP": {
+        "nameTextMapHash": 3366286741
+    },
+    "FIGHT_PROP_CUR_ATTACK": {
+        "nameTextMapHash": 638981362
+    },
+    "FIGHT_PROP_CUR_DEFENSE": {
+        "nameTextMapHash": 1575853882
+    },
+    "FIGHT_PROP_CUR_SPEED": {
+        "nameTextMapHash": 96988362
+    },
+    "FIGHT_PROP_CUR_HP": {
+        "nameTextMapHash": 2738216570
+    },
+    "FIGHT_PROP_SKILL_CD_MINUS_RATIO": {
+        "nameTextMapHash": 1083556685
+    },
+    "FIGHT_PROP_SHIELD_COST_MINUS_RATIO": {
+        "nameTextMapHash": 195785769
+    },
+    "FIGHT_PROP_ATTACK_PERCENT_A": {
+        "nameTextMapHash": 2796372974
+    },
+    "FIGHT_PROP_DEFENSE_PERCENT_A": {
+        "nameTextMapHash": 3076885710
+    },
+    "FIGHT_PROP_HP_PERCENT_A": {
+        "nameTextMapHash": 2756497090
+    }
+}
