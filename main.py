@@ -62,7 +62,7 @@ async def create_lang(data: dict, filename: str = "", has_key_name_hash: bool = 
                     DATA[hashKey] = {}
                 DATA[hashKey][lang] = ""
 
-    with open(os.path.join("exports", "langs", filename), "w", encoding="utf-8") as f:
+    with open(os.path.join("exports", "lang", filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(DATA, ensure_ascii=False, indent=4))
 
 async def main():
@@ -108,13 +108,13 @@ async def main():
         await download_json(
             url=lang["download_url"],
             filename=lang["name"],
-            path=os.path.join("raw", "langs")
+            path=os.path.join("raw", "lang")
         )
 
     # Load langs 
-    for lang in os.listdir(os.path.join("raw", "langs")):
+    for lang in os.listdir(os.path.join("raw", "lang")):
         if lang.endswith(".json"):
-            with open(os.path.join("raw", "langs", lang), "r", encoding="utf-8") as f:
+            with open(os.path.join("raw", "lang", lang), "r", encoding="utf-8") as f:
                 _lang = lang.split(".")[0].replace("TextMap", "")
                 LOGGER.debug(f"Loading lang ({_lang})...")
                 LANGS[_lang] = json.loads(f.read())
@@ -272,16 +272,16 @@ async def main():
         await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
 
     # Push to github
-    await push_to_github(f"""{last_message}
-- SHA: {last_commit}
-- URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
-    """)
+#     await push_to_github(f"""{last_message}
+# - SHA: {last_commit}
+# - URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
+#     """)
 
-    # Save lastest commit
-    LOGGER.debug(f"Saving lastest commit...")
-    await save_commit_local(last_commit)
+#     # Save lastest commit
+#     LOGGER.debug(f"Saving lastest commit...")
+#     await save_commit_local(last_commit)
 
-    LOGGER.debug(f"Done!")
+#     LOGGER.debug(f"Done!")
 
 if __name__ == "__main__":
     loop = asyncio.get_event_loop()
