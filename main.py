@@ -237,7 +237,12 @@ async def main():
         LOGGER.debug(f"Getting skills {avatar['skillDepotId']}")
         depot = SKILLS_DEPOT.get(avatar["skillDepotId"])
         if depot and depot["id"] != 101:
+            for skill in depot["skills"]:
+                if skill <= 0:
+                    continue
             
+                AVATAR["skills"].append(skill)
+
             energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
 
             if energry:
@@ -245,12 +250,8 @@ async def main():
                 AVATAR.update({
                     "costElemType": energry["costElemType"]
                 })
+                AVATAR["skills"].append(int(depot.get('energySkill')))
 
-            for skill in depot["skills"]:
-                if skill <= 0:
-                    continue
-            
-                AVATAR["skills"].append(skill)
 
             AVATAR.update({
                 "talents": depot["talents"]
