@@ -39,7 +39,8 @@ ENVKEY = [
     "ARTIFACTS",
     "WEAPONS",
     "FIGHT_PROPS",
-    "NAMECARDS"
+    "NAMECARDS",
+    "ARTIFACTS_SETS"
 ]
 
 LANGS = {}
@@ -171,6 +172,18 @@ async def main():
             "mainPropDepotId": artifact["mainPropDepotId"],
             "appendPropDepotId": artifact["appendPropDepotId"],
         }
+
+    # Load artifacts sets
+    for artifactSet in DATA["EquipAffixExcelConfigData"]:
+        LOGGER.debug(f"Getting artifact set {artifactSet['id']}...")
+        if not "artifact_sets" in EXPORT_DATA:
+            EXPORT_DATA["artifact_sets"] = {}
+
+        if artifactSet["openConfig"].startswith("Relic_"):
+            EXPORT_DATA["artifact_sets"][artifactSet["id"]] = {
+                "affixId": artifactSet["affixId"],
+                "nameTextMapHash": artifactSet["nameTextMapHash"],
+            }
         
     # Load weapons
     for weapon in DATA["WeaponExcelConfigData"]:
@@ -221,7 +234,9 @@ async def main():
     for avatar in DATA["AvatarExcelConfigData"]:
         AVATAR = {}
         LOGGER.debug(f"Processing {avatar['id']}...")
-        if avatar["skillDepotId"] == 101 or avatar["iconName"].endswith("_Kate"):
+        if  avatar["skillDepotId"] == 101 or \
+            avatar["iconName"].endswith("_Kate") or \
+            str(avatar['id'])[:2] == "11": # 11 is test character mode 
             LOGGER.debug(f"Skipping {avatar['id']}...")
             continue
 
@@ -254,7 +269,7 @@ async def main():
 
 
             AVATAR.update({
-                "talents": depot["talents"]
+                "talents": [x for x in depot["talents"] if x > 0],
             })
 
         if not "characters" in EXPORT_DATA:
@@ -273,10 +288,10 @@ async def main():
         await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
 
     # Push to github
-    await push_to_github(f"""{last_message}
-- SHA: {last_commit}
-- URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
-    """)
+#     await push_to_github(f"""{last_message}
+# - SHA: {last_commit}
+# - URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
+#     """)
 
     # Save lastest commit
     LOGGER.debug(f"Saving lastest commit...")
