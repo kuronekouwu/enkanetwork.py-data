@@ -183,7 +183,8 @@ async def main():
         if not "artifact_sets" in EXPORT_DATA:
             EXPORT_DATA["artifact_sets"] = {}
 
-        if artifactSet["openConfig"].startswith("Relic_"):
+        if  artifactSet["openConfig"].startswith("Relic_") or \
+            artifactSet["openConfig"].startswith("Relci_"):
             EXPORT_DATA["artifact_sets"][artifactSet["affixId"]] = {
                 "affixId": artifactSet["affixId"],
                 "nameTextMapHash": artifactSet["nameTextMapHash"],
