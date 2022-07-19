@@ -175,12 +175,12 @@ async def main():
 
     # Load artifacts sets
     for artifactSet in DATA["EquipAffixExcelConfigData"]:
-        LOGGER.debug(f"Getting artifact set {artifactSet['id']}...")
+        LOGGER.debug(f"Getting artifact set {artifactSet['affixId']}...")
         if not "artifact_sets" in EXPORT_DATA:
             EXPORT_DATA["artifact_sets"] = {}
 
         if artifactSet["openConfig"].startswith("Relic_"):
-            EXPORT_DATA["artifact_sets"][artifactSet["id"]] = {
+            EXPORT_DATA["artifact_sets"][artifactSet["affixId"]] = {
                 "affixId": artifactSet["affixId"],
                 "nameTextMapHash": artifactSet["nameTextMapHash"],
             }
