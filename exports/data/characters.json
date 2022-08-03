@@ -149,7 +149,7 @@
         "iconName": "UI_AvatarIcon_PlayerBoy",
         "sideIconName": "UI_AvatarIcon_Side_PlayerBoy",
         "qualityType": "QUALITY_ORANGE",
-        "costElemType": "Electric",
+        "costElemType": "",
         "skills": [],
         "talents": []
     },
@@ -282,7 +282,7 @@
         "iconName": "UI_AvatarIcon_PlayerGirl",
         "sideIconName": "UI_AvatarIcon_Side_PlayerGirl",
         "qualityType": "QUALITY_ORANGE",
-        "costElemType": "Electric",
+        "costElemType": "",
         "skills": [],
         "talents": []
     },
