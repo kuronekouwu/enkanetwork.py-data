@@ -91,7 +91,7 @@ async def save_data(data: dict, filename: str, delete_key: list = []) -> None:
     for key in _data:
         for _del in delete_key:
             del _data[key][_del]
-
+            
     with open(os.path.join("exports", "data", filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(_data, ensure_ascii=False, indent=4))
     LOGGER.debug(f"{filename} saved")

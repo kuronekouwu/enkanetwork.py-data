@@ -33,6 +33,8 @@ REPOSITORY = os.getenv('GITHUB_REPOSITORY')
 
 # Check is DEV_MODE
 DEVMODE = sys.argv[1] == "dev" if len(sys.argv) > 1 else False
+BYPASS = sys.argv[2] == "bypass" if len(sys.argv) > 2 else False
+SKIP_DOWNLOAD = sys.argv[3] == "skip_download" if len(sys.argv) > 3 else False
 
 # ENV
 ENVKEY = [
@@ -44,7 +46,8 @@ ENVKEY = [
     "WEAPONS",
     "FIGHT_PROPS",
     "NAMECARDS",
-    "ARTIFACTS_SETS"
+    "ARTIFACTS_SETS",
+    "COSTUME"
 ]
 
 LANGS = {}
@@ -88,33 +91,35 @@ async def main():
 
     LOGGER.debug(f"Checking last commit on local...")
     last_commit_local = await load_commit_local()
-    if last_commit_local == last_commit:
+    if last_commit_local == last_commit and not BYPASS  :
         LOGGER.debug(f"Not updated... exiting...")
         return
 
     LOGGER.debug(f"New commit found on GitHub")
 
-    for key in ENVKEY:
-        filename = os.getenv(key)
-        if not filename:
-            LOGGER.error(f"{key} not found in .env")
-            continue
+    if not SKIP_DOWNLOAD:
+        for key in ENVKEY:
+            filename = os.getenv(key)
+            if not filename:
+                LOGGER.error(f"{key} not found in .env")
+                continue
 
-        await download_json(
-            url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
-            filename=filename, 
-            path=os.path.join("raw", "data")
-        )
+            await download_json(
+                url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
+                filename=filename, 
+                path=os.path.join("raw", "data")
+            )
 
     await asyncio.sleep(1)
 
-    langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
-    for lang in langPath:
-        await download_json(
-            url=lang["download_url"],
-            filename=lang["name"],
-            path=os.path.join("raw", "langs")
-        )
+    if not SKIP_DOWNLOAD:
+        langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
+        for lang in langPath:
+            await download_json(
+                url=lang["download_url"],
+                filename=lang["name"],
+                path=os.path.join("raw", "langs")
+            )
 
     # Load langs 
     for lang in os.listdir(os.path.join("raw", "langs")):
@@ -235,6 +240,26 @@ async def main():
         LOGGER.debug(f"Getting skill depot: {skillDepot['id']}...")
         SKILLS_DEPOT[skillDepot["id"]] = skillDepot
         
+    # Characters costumes
+    for costume in DATA["AvatarCostumeExcelConfigData"]:
+        """
+            BDFMGMADMGC: costumeId
+            MKPEEANCLCO: iconName
+        """
+        LOGGER.debug(f"Getting character costume: {costume['BDFMGMADMGC']}...")
+        if not "costumes" in EXPORT_DATA:
+            EXPORT_DATA["costumes"] = {}
+
+        if not "FFBLCEFDNPC" in costume:
+            LOGGER.debug(f"Character costume {costume['BDFMGMADMGC']} has no data... Skpping...")
+            continue
+
+        EXPORT_DATA["costumes"][costume["BDFMGMADMGC"]] = {
+            "iconName": costume["MKPEEANCLCO"],
+            "sideIconName": costume["sideIconName"],
+            "nameTextMapHash": costume["nameTextMapHash"],
+        }
+    
     # Link data (Avatar)
     for avatar in DATA["AvatarExcelConfigData"]:
         AVATAR = {}
@@ -245,6 +270,9 @@ async def main():
             LOGGER.debug(f"Skipping {avatar['id']}...")
             continue
 
+        if not "characters" in EXPORT_DATA:
+            EXPORT_DATA["characters"] = {}
+
         AVATAR.update({
             "nameTextMapHash": avatar["nameTextMapHash"],
             "iconName": avatar["iconName"],
@@ -252,35 +280,66 @@ async def main():
             "qualityType": avatar["qualityType"],
             "costElemType": "",
             "skills": [],
+            "talents": []
         })
-        
-        LOGGER.debug(f"Getting skills {avatar['skillDepotId']}")
-        depot = SKILLS_DEPOT.get(avatar["skillDepotId"])
-        if depot and depot["id"] != 101:
-            for skill in depot["skills"]:
-                if skill <= 0:
-                    continue
-            
-                AVATAR["skills"].append(skill)
 
-            energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
+        if avatar["iconName"].endswith("_PlayerBoy") or \
+            avatar["iconName"].endswith("_PlayerGirl"):
+            LOGGER.debug("Getting skill (candSkillDepotIds): {}...".format(avatar["candSkillDepotIds"]))
 
-            if energry:
-                LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
+            for cand_depot in avatar["candSkillDepotIds"]:
                 AVATAR.update({
-                    "costElemType": energry["costElemType"]
+                    "skills": [],
+                    "talents": []
                 })
-                AVATAR["skills"].append(int(depot.get('energySkill')))
+
+                depot = SKILLS_DEPOT.get(cand_depot)
+                if depot and depot["id"] != 101:
+                    for skill in depot["skills"]:
+                        if skill <= 0:
+                            continue
+
+                        AVATAR["skills"].append(skill)
+                    
+                energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
+
+                if energry:
+                    LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
+                    AVATAR.update({
+                        "costElemType": energry["costElemType"]
+                    })
+                    AVATAR["skills"].append(int(depot.get('energySkill')))
+
+                AVATAR.update({
+                    "talents": [x for x in depot["talents"] if x > 0],
+                })
+
+                EXPORT_DATA["characters"][str(avatar["id"]) + "-" + str(depot["id"])] = AVATAR.copy()
+        else:
+            LOGGER.debug(f"Getting skills {avatar['skillDepotId']}")
+            depot = SKILLS_DEPOT.get(avatar["skillDepotId"])
+            if depot and depot["id"] != 101:
+                for skill in depot["skills"]:
+                    if skill <= 0:
+                        continue
+                
+                    AVATAR["skills"].append(skill)
+
+                energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
+
+                if energry:
+                    LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
+                    AVATAR.update({
+                        "costElemType": energry["costElemType"]
+                    })
+                    AVATAR["skills"].append(int(depot.get('energySkill')))
 
 
-            AVATAR.update({
-                "talents": [x for x in depot["talents"] if x > 0],
-            })
-
-        if not "characters" in EXPORT_DATA:
-            EXPORT_DATA["characters"] = {}
+                AVATAR.update({
+                    "talents": [x for x in depot["talents"] if x > 0],
+                })
         
-        EXPORT_DATA["characters"][avatar["id"]] = AVATAR
+            EXPORT_DATA["characters"][avatar["id"]] = AVATAR
 
     LOGGER.debug("Exporting data...")
     for key in EXPORT_DATA:
