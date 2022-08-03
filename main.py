@@ -315,6 +315,14 @@ async def main():
                 })
 
                 EXPORT_DATA["characters"][str(avatar["id"]) + "-" + str(depot["id"])] = AVATAR.copy()
+
+            AVATAR.update({
+                "skills": [],
+                "talents": []
+            })
+                
+            EXPORT_DATA["characters"][str(avatar["id"])] = AVATAR.copy()
+
         else:
             LOGGER.debug(f"Getting skills {avatar['skillDepotId']}")
             depot = SKILLS_DEPOT.get(avatar["skillDepotId"])

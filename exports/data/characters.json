@@ -144,6 +144,15 @@
             106
         ]
     },
+    "10000005": {
+        "nameTextMapHash": 1533656818,
+        "iconName": "UI_AvatarIcon_PlayerBoy",
+        "sideIconName": "UI_AvatarIcon_Side_PlayerBoy",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Electric",
+        "skills": [],
+        "talents": []
+    },
     "10000006": {
         "nameTextMapHash": 3344622722,
         "iconName": "UI_AvatarIcon_Lisa",
@@ -267,6 +276,15 @@
             105,
             106
         ]
+    },
+    "10000007": {
+        "nameTextMapHash": 3816664530,
+        "iconName": "UI_AvatarIcon_PlayerGirl",
+        "sideIconName": "UI_AvatarIcon_Side_PlayerGirl",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Electric",
+        "skills": [],
+        "talents": []
     },
     "10000014": {
         "nameTextMapHash": 3775299170,
