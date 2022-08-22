@@ -256,7 +256,8 @@ async def main():
                     _key["costumeId"] = key
                     continue
 
-                if _valstr.startswith("UI_AvatarIcon_"):
+                if _valstr.startswith("UI_AvatarIcon_") and \
+                    not _valstr.startswith("UI_AvatarIcon_Side_"):
                     LOGGER.debug(f"Get key 'iconName' is: {key}")
                     _key["iconName"] = key
                     continue
