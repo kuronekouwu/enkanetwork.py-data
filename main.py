@@ -241,21 +241,36 @@ async def main():
         SKILLS_DEPOT[skillDepot["id"]] = skillDepot
         
     # Characters costumes
+    _key = {
+        "costumeId": "",
+        "iconName": ""
+    }
     for costume in DATA["AvatarCostumeExcelConfigData"]:
-        """
-            BDFMGMADMGC: costumeId
-            MKPEEANCLCO: iconName
-        """
-        LOGGER.debug(f"Getting character costume: {costume['BDFMGMADMGC']}...")
+        if _key["costumeId"] == "" or _key["iconName"] == "":
+            # Find key costumeId
+            LOGGER.debug("Find key 'costumeId' and 'iconName'")
+            for key in costume:
+                _valstr = str(costume[key])
+                if _valstr.startswith("2") and len(_valstr) == 6:
+                    LOGGER.debug(f"Get key 'costumeId' is: {key}")
+                    _key["costumeId"] = key
+                    continue
+
+                if _valstr.startswith("UI_AvatarIcon_"):
+                    LOGGER.debug(f"Get key 'iconName' is: {key}")
+                    _key["iconName"] = key
+                    continue
+
+        LOGGER.debug(f"Getting character costume: {costume[_key['costumeId']]}...")
         if not "costumes" in EXPORT_DATA:
             EXPORT_DATA["costumes"] = {}
 
-        if not "FFBLCEFDNPC" in costume:
-            LOGGER.debug(f"Character costume {costume['BDFMGMADMGC']} has no data... Skpping...")
+        if not _key['iconName'] in costume:
+            LOGGER.debug(f"Character costume {costume[_key['costumeId']]} has no data... Skpping...")
             continue
 
-        EXPORT_DATA["costumes"][costume["BDFMGMADMGC"]] = {
-            "iconName": costume["MKPEEANCLCO"],
+        EXPORT_DATA["costumes"][costume[_key['costumeId']]] = {
+            "iconName": costume[_key['iconName']],
             "sideIconName": costume["sideIconName"],
             "nameTextMapHash": costume["nameTextMapHash"],
         }
@@ -264,7 +279,7 @@ async def main():
     for avatar in DATA["AvatarExcelConfigData"]:
         AVATAR = {}
         LOGGER.debug(f"Processing {avatar['id']}...")
-        if  avatar["skillDepotId"] == 101 or \
+        if avatar["skillDepotId"] == 101 or \
             avatar["iconName"].endswith("_Kate") or \
             str(avatar['id'])[:2] == "11": # 11 is test character mode 
             LOGGER.debug(f"Skipping {avatar['id']}...")
@@ -300,21 +315,21 @@ async def main():
                             continue
 
                         AVATAR["skills"].append(skill)
-                    
-                energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
 
-                if energry:
-                    LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
+                    energry = EXPORT_DATA["skills"].get(depot.get("energySkill"))
+
+                    if energry:
+                        LOGGER.debug(f"Getting skills element {depot.get('energySkill')}")
+                        AVATAR.update({
+                            "costElemType": energry["costElemType"]
+                        })
+                        AVATAR["skills"].append(int(depot.get('energySkill')))
+
                     AVATAR.update({
-                        "costElemType": energry["costElemType"]
+                        "talents": [x for x in depot["talents"] if x > 0],
                     })
-                    AVATAR["skills"].append(int(depot.get('energySkill')))
 
-                AVATAR.update({
-                    "talents": [x for x in depot["talents"] if x > 0],
-                })
-
-                EXPORT_DATA["characters"][str(avatar["id"]) + "-" + str(depot["id"])] = AVATAR.copy()
+                    EXPORT_DATA["characters"][str(avatar["id"]) + "-" + str(depot["id"])] = AVATAR.copy()
 
             AVATAR.update({
                 "skills": [],
