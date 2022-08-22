@@ -143,6 +143,12 @@
         "awakenIcon": "UI_EquipIcon_Sword_Youtou_Awaken",
         "rankLevel": 4
     },
+    "11417": {
+        "nameTextMapHash": 313300315,
+        "icon": "UI_EquipIcon_Sword_Arakalari",
+        "awakenIcon": "UI_EquipIcon_Sword_Arakalari_Awaken",
+        "rankLevel": 4
+    },
     "11419": {
         "nameTextMapHash": 1499745907,
         "icon": "UI_EquipIcon_Sword_YoutouEnchanted",
@@ -353,6 +359,12 @@
         "awakenIcon": "UI_EquipIcon_Claymore_Maria_Awaken",
         "rankLevel": 4
     },
+    "12417": {
+        "nameTextMapHash": 902184579,
+        "icon": "UI_EquipIcon_Claymore_Arakalari",
+        "awakenIcon": "UI_EquipIcon_Claymore_Arakalari_Awaken",
+        "rankLevel": 4
+    },
     "12501": {
         "nameTextMapHash": 1089950259,
         "icon": "UI_EquipIcon_Claymore_Dvalin",
@@ -513,6 +525,12 @@
         "nameTextMapHash": 4122509083,
         "icon": "UI_EquipIcon_Pole_Maria",
         "awakenIcon": "UI_EquipIcon_Pole_Maria_Awaken",
+        "rankLevel": 4
+    },
+    "13417": {
+        "nameTextMapHash": 452357939,
+        "icon": "UI_EquipIcon_Pole_Arakalari",
+        "awakenIcon": "UI_EquipIcon_Pole_Arakalari_Awaken",
         "rankLevel": 4
     },
     "13501": {
@@ -699,6 +717,12 @@
         "nameTextMapHash": 2539208459,
         "icon": "UI_EquipIcon_Catalyst_Jyanome",
         "awakenIcon": "UI_EquipIcon_Catalyst_Jyanome_Awaken",
+        "rankLevel": 4
+    },
+    "14417": {
+        "nameTextMapHash": 2267978875,
+        "icon": "UI_EquipIcon_Catalyst_Arakalari",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Arakalari_Awaken",
         "rankLevel": 4
     },
     "14501": {
@@ -893,6 +917,18 @@
         "awakenIcon": "UI_EquipIcon_Bow_Maria_Awaken",
         "rankLevel": 4
     },
+    "15417": {
+        "nameTextMapHash": 3176599083,
+        "icon": "UI_EquipIcon_Bow_Arakalari",
+        "awakenIcon": "UI_EquipIcon_Bow_Arakalari_Awaken",
+        "rankLevel": 4
+    },
+    "15418": {
+        "nameTextMapHash": 3063191787,
+        "icon": "UI_EquipIcon_Bow_Fin",
+        "awakenIcon": "UI_EquipIcon_Bow_Fin_Awaken",
+        "rankLevel": 4
+    },
     "15501": {
         "nameTextMapHash": 3933622347,
         "icon": "UI_EquipIcon_Bow_Dvalin",
@@ -945,6 +981,12 @@
         "nameTextMapHash": 2918525947,
         "icon": "UI_EquipIcon_Bow_Narukami",
         "awakenIcon": "UI_EquipIcon_Bow_Narukami_Awaken",
+        "rankLevel": 5
+    },
+    "15511": {
+        "nameTextMapHash": 1348687251,
+        "icon": "UI_EquipIcon_Bow_Ayus",
+        "awakenIcon": "UI_EquipIcon_Bow_Ayus_Awaken",
         "rankLevel": 5
     },
     "20001": {
