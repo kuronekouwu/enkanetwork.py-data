@@ -266,7 +266,7 @@ async def main():
         if not "costumes" in EXPORT_DATA:
             EXPORT_DATA["costumes"] = {}
 
-        if not _key['iconName'] in costume:
+        if not _key['iconName'] in costume or costume[_key['iconName']] == "":
             LOGGER.debug(f"Character costume {costume[_key['costumeId']]} has no data... Skpping...")
             continue
 
