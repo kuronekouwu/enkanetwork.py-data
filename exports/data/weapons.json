@@ -149,6 +149,12 @@
         "awakenIcon": "UI_EquipIcon_Sword_Arakalari_Awaken",
         "rankLevel": 4
     },
+    "11418": {
+        "nameTextMapHash": 143051931,
+        "icon": "UI_EquipIcon_Sword_Pleroma",
+        "awakenIcon": "UI_EquipIcon_Sword_Pleroma_Awaken",
+        "rankLevel": 4
+    },
     "11419": {
         "nameTextMapHash": 1499745907,
         "icon": "UI_EquipIcon_Sword_YoutouEnchanted",
@@ -225,6 +231,12 @@
         "nameTextMapHash": 1600275315,
         "icon": "UI_EquipIcon_Sword_Amenoma",
         "awakenIcon": "UI_EquipIcon_Sword_Amenoma_Awaken",
+        "rankLevel": 5
+    },
+    "11511": {
+        "nameTextMapHash": 454086795,
+        "icon": "UI_EquipIcon_Sword_Deshret",
+        "awakenIcon": "UI_EquipIcon_Sword_Deshret_Awaken",
         "rankLevel": 5
     },
     "12101": {
@@ -351,6 +363,12 @@
         "nameTextMapHash": 4193089947,
         "icon": "UI_EquipIcon_Claymore_Bakufu",
         "awakenIcon": "UI_EquipIcon_Claymore_Bakufu_Awaken",
+        "rankLevel": 4
+    },
+    "12415": {
+        "nameTextMapHash": 3073454867,
+        "icon": "UI_EquipIcon_Claymore_Pleroma",
+        "awakenIcon": "UI_EquipIcon_Claymore_Pleroma_Awaken",
         "rankLevel": 4
     },
     "12416": {
@@ -533,6 +551,12 @@
         "awakenIcon": "UI_EquipIcon_Pole_Arakalari_Awaken",
         "rankLevel": 4
     },
+    "13419": {
+        "nameTextMapHash": 1470442731,
+        "icon": "UI_EquipIcon_Pole_Windvane",
+        "awakenIcon": "UI_EquipIcon_Pole_Windvane_Awaken",
+        "rankLevel": 4
+    },
     "13501": {
         "nameTextMapHash": 3235324891,
         "icon": "UI_EquipIcon_Pole_Homa",
@@ -579,6 +603,12 @@
         "nameTextMapHash": 3717849275,
         "icon": "UI_EquipIcon_Pole_Narukami",
         "awakenIcon": "UI_EquipIcon_Pole_Narukami_Awaken",
+        "rankLevel": 5
+    },
+    "13511": {
+        "nameTextMapHash": 4238339131,
+        "icon": "UI_EquipIcon_Pole_Deshret",
+        "awakenIcon": "UI_EquipIcon_Pole_Deshret_Awaken",
         "rankLevel": 5
     },
     "14101": {
@@ -717,6 +747,12 @@
         "nameTextMapHash": 2539208459,
         "icon": "UI_EquipIcon_Catalyst_Jyanome",
         "awakenIcon": "UI_EquipIcon_Catalyst_Jyanome_Awaken",
+        "rankLevel": 4
+    },
+    "14416": {
+        "nameTextMapHash": 426363739,
+        "icon": "UI_EquipIcon_Catalyst_Pleroma",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Pleroma_Awaken",
         "rankLevel": 4
     },
     "14417": {
