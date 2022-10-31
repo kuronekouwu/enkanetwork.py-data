@@ -809,6 +809,12 @@
         "awakenIcon": "UI_EquipIcon_Catalyst_Narukami_Awaken",
         "rankLevel": 5
     },
+    "14511": {
+        "nameTextMapHash": 1201790667,
+        "icon": "UI_EquipIcon_Catalyst_Ayus",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Ayus_Awaken",
+        "rankLevel": 5
+    },
     "15101": {
         "nameTextMapHash": 3600623979,
         "icon": "UI_EquipIcon_Bow_Hunters",

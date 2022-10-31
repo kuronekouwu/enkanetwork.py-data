@@ -30829,8 +30829,8 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_RING",
         "icon": "UI_RelicIcon_15025_1",
-        "rankLevel": 4,
-        "mainPropDepotId": 5088,
+        "rankLevel": 5,
+        "mainPropDepotId": 5090,
         "appendPropDepotId": 964
     },
     "23627": {
@@ -30937,8 +30937,8 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_DRESS",
         "icon": "UI_RelicIcon_15026_3",
-        "rankLevel": 4,
-        "mainPropDepotId": 3096,
+        "rankLevel": 5,
+        "mainPropDepotId": 3095,
         "appendPropDepotId": 965
     },
     "23639": {
