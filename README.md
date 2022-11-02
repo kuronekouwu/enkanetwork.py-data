@@ -1,5 +1,5 @@
 ## Attemption
-[Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) has been DMCA takedown by miHoYo / Hoyoverse. I will temporarily archives this project when found new soruce.
+[Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) has been DMCA takedown by miHoYo / Hoyoverse. I will temporarily archives this project util found new soruce. 
 
 Thank you everyone use this project 🙏
 
