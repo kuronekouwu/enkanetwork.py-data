@@ -1,3 +1,10 @@
+## Attemption
+[Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) has been DMCA takedown by miHoYo / Hoyoverse. I will temporarily archives this project when found new soruce.
+
+Thank you everyone use this project 🙏
+
+M-307
+
 # EnkaNetwork.py (JSON Data)
 Repository for fetch data from [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) to use [EnkaNetwork.py](https://github.com/mrwan200/EnkaNetwork.py) python library.
 
