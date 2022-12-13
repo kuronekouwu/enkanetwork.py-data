@@ -1,9 +1,13 @@
-## Attemption
-[Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) has been DMCA takedown by miHoYo / Hoyoverse. I will temporarily archives this project util found new soruce. 
+## Update
+I found new source for get new excel data. So I will come back and auto update library again.
 
-Thank you everyone use this project 🙏
+And unfortunatly, I can't to tell where soruce excel data.
 
-M-307
+Anyway, Thank you everyone use this project🙏
+
+So let's begin 🤩
+
+- M-307
 
 # EnkaNetwork.py (JSON Data)
 Repository for fetch data from [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) to use [EnkaNetwork.py](https://github.com/mrwan200/EnkaNetwork.py) python library.
