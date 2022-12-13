@@ -47,7 +47,8 @@ ENVKEY = [
     "FIGHT_PROPS",
     "NAMECARDS",
     "ARTIFACTS_SETS",
-    "COSTUME"
+    "COSTUME",
+    "PROPMAP"
 ]
 
 LANGS = {}
@@ -150,8 +151,10 @@ async def main():
         EXPORT_DATA["skills"][skillData["id"]] = {
             "nameTextMapHash": skillData["nameTextMapHash"],
             "skillIcon": skillData["skillIcon"],
+            "forceCanDoSkill": skillData.get("forceCanDoSkill", None),
             "costElemType": skillData.get("costElemType", ""),
-        }
+            "proudSkillGroupId": skillData.get("proudSkillGroupId","")
+        } 
 
     # Load constellations
     for talent in DATA["AvatarTalentExcelConfigData"]:
@@ -346,6 +349,11 @@ async def main():
                 for skill in depot["skills"]:
                     if skill <= 0:
                         continue
+
+                    # Check if skill is alternative
+                    skill_info = EXPORT_DATA["skills"].get(int(skill))
+                    if not skill_info["forceCanDoSkill"] is None:
+                         continue
                 
                     AVATAR["skills"].append(skill)
 
@@ -370,6 +378,7 @@ async def main():
         _delKey = []
         if key == "skills":
             _delKey.append("costElemType")
+            _delKey.append("forceCanDoSkill")
 
         LOGGER.debug(f"Exporting {key}...")
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
