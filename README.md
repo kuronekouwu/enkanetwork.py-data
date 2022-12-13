@@ -1,7 +1,7 @@
 ## Update
 I found new source for get new excel data. So I will come back and auto update library again.
 
-And unfortunatly, I can't to tell where soruce excel data.
+And unfortunatly, I can't to tell where source excel data.
 
 Anyway, Thank you everyone use this project🙏
 
