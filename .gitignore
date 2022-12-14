@@ -2,3 +2,4 @@ last_commit.txt
 raw/data/*.json
 raw/langs/*.json
 __pycache__
+.env

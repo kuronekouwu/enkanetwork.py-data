@@ -6,6 +6,9 @@ import sys
 
 from dotenv import load_dotenv
 
+# Load .env file
+load_dotenv()
+
 from utils import (
     request,
     download_json,
@@ -14,9 +17,6 @@ from utils import (
     save_commit_local,
     save_data
 )
-
-# Load .env file
-load_dotenv()
 
 # API GitHub
 GITHUB_SITE = "https://github.com/{PATH}"
