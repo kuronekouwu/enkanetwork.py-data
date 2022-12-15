@@ -17,6 +17,11 @@ LOGGER = logging.getLogger(__name__)
 HEADER = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.66 Safari/537.36 Edg/103.0.1264.44"
 }
+# Github Token for private repo
+GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+if GITHUB_TOKEN:
+    HEADER["Authorization"] = f"token {GITHUB_TOKEN}"
+
 
 async def request(url: str, method: str = "GET", headers: dict = None, body: str = None) -> dict:
     _url = url.strip(" ")
@@ -67,12 +72,14 @@ async def request(url: str, method: str = "GET", headers: dict = None, body: str
                 raise e
 
 
+
 async def download_json(url: str, filename: str, path: str = ".") -> None:
     LOGGER.debug(f"Fetching {filename} from GitHub...")
     response = await request(url)
     with open(os.path.join(path, filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(response, ensure_ascii=False, indent=4))
     LOGGER.debug(f"{filename} saved")
+
 
 async def load_commit_local():
     if os.path.exists("last_commit.txt"):
@@ -82,9 +89,11 @@ async def load_commit_local():
         last_commit_local = ""
     return last_commit_local
 
+
 async def save_commit_local(commit_id: str):
     with open("last_commit.txt", "w") as f:
         f.write(commit_id)
+
 
 async def save_data(data: dict, filename: str, delete_key: list = []) -> None:
     _data = copy.deepcopy(data)
@@ -95,6 +104,7 @@ async def save_data(data: dict, filename: str, delete_key: list = []) -> None:
     with open(os.path.join("exports", "data", filename), "w", encoding="utf-8") as f:
         f.write(json.dumps(_data, ensure_ascii=False, indent=4))
     LOGGER.debug(f"{filename} saved")
+
 
 async def push_to_github(commit: str = "") -> None:
     repo = Repo("./")
