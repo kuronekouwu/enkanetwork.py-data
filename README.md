@@ -10,19 +10,19 @@ So let's begin 🤩
 - M-307
 
 # EnkaNetwork.py (JSON Data)
-Repository for fetch data from [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) to use [EnkaNetwork.py](https://github.com/mrwan200/EnkaNetwork.py) python library.
+Repository for format **Excel data** to use [EnkaNetwork.py](https://github.com/mrwan200/EnkaNetwork.py) python library.
 
 ## ❓ Why not use EnkaNetwork store data?
 I want some data like Skill name, Constellations data fully, FIGHT_PROP name but In EnkaNetowork prepare not fully served data. So I have to make this.
 
 ## ❓ How you fetch raw JSON data?
-I fetch JSON data from repo [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData)
+I fetch JSON data from some repo
 
 ## ❓ How to get export data?
 Yon can see in [exports](./exports/) folder.
 
 ## ❓ How do I know this repo has been updated?
-In every 00:00 (UTC+7) data will fetch last commit from [Dimbreath/GenshinData](https://github.com/Dimbreath/GenshinData) 
+In every 00:00 (UTC+7) it's will be fetch last data from some repo
 and check if commit is different from last commit. If different, it will update data take a 3 - 5 minutes to update data.
 
 ## ❓ Why avatar id has "10000005-503" or "10000007-702"?
