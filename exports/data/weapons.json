@@ -173,6 +173,12 @@
         "awakenIcon": "UI_EquipIcon_Sword_YoutouEnchanted",
         "rankLevel": 4
     },
+    "11422": {
+        "nameTextMapHash": 2448629019,
+        "icon": "UI_EquipIcon_Sword_Kasabouzu",
+        "awakenIcon": "UI_EquipIcon_Sword_Kasabouzu_Awaken",
+        "rankLevel": 4
+    },
     "11501": {
         "nameTextMapHash": 902264035,
         "icon": "UI_EquipIcon_Sword_Falcon",
@@ -237,6 +243,12 @@
         "nameTextMapHash": 454086795,
         "icon": "UI_EquipIcon_Sword_Deshret",
         "awakenIcon": "UI_EquipIcon_Sword_Deshret_Awaken",
+        "rankLevel": 5
+    },
+    "11512": {
+        "nameTextMapHash": 275622963,
+        "icon": "UI_EquipIcon_Sword_Ayus",
+        "awakenIcon": "UI_EquipIcon_Sword_Ayus_Awaken",
         "rankLevel": 5
     },
     "12101": {
@@ -427,8 +439,8 @@
     },
     "12509": {
         "nameTextMapHash": 2507837467,
-        "icon": "UI_EquipIcon_Claymore_Narukami",
-        "awakenIcon": "UI_EquipIcon_Claymore_Narukami_Awaken",
+        "icon": "UI_EquipIcon_Claymore_Aniki",
+        "awakenIcon": "UI_EquipIcon_Claymore_Aniki_Awaken",
         "rankLevel": 5
     },
     "12510": {
@@ -813,6 +825,12 @@
         "nameTextMapHash": 1201790667,
         "icon": "UI_EquipIcon_Catalyst_Ayus",
         "awakenIcon": "UI_EquipIcon_Catalyst_Ayus_Awaken",
+        "rankLevel": 5
+    },
+    "14512": {
+        "nameTextMapHash": 359484419,
+        "icon": "UI_EquipIcon_Catalyst_Alaya",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Alaya_Awaken",
         "rankLevel": 5
     },
     "15101": {
