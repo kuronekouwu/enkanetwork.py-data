@@ -395,6 +395,12 @@
         "awakenIcon": "UI_EquipIcon_Claymore_Arakalari_Awaken",
         "rankLevel": 4
     },
+    "12418": {
+        "nameTextMapHash": 1200948859,
+        "icon": "UI_EquipIcon_Claymore_Fleurfair",
+        "awakenIcon": "UI_EquipIcon_Claymore_Fleurfair_Awaken",
+        "rankLevel": 4
+    },
     "12501": {
         "nameTextMapHash": 1089950259,
         "icon": "UI_EquipIcon_Claymore_Dvalin",
@@ -447,6 +453,12 @@
         "nameTextMapHash": 3914951691,
         "icon": "UI_EquipIcon_Claymore_Itadorimaru",
         "awakenIcon": "UI_EquipIcon_Claymore_Itadorimaru_Awaken",
+        "rankLevel": 5
+    },
+    "12511": {
+        "nameTextMapHash": 2834063555,
+        "icon": "UI_EquipIcon_Claymore_Deshret",
+        "awakenIcon": "UI_EquipIcon_Claymore_Deshret_Awaken",
         "rankLevel": 5
     },
     "13101": {
