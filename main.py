@@ -48,8 +48,11 @@ ENVKEY = [
     "NAMECARDS",
     "ARTIFACTS_SETS",
     "COSTUME",
-    "PROPMAP"
+    "PROPS_MAP",
+    "ARTIFACT_PROPS_MAIN",
+    "ARTIFACT_PROPS_SUB"
 ]
+SKIP_HASH = ["artifact_props"]
 
 LANGS = {}
 DATA = {}
@@ -100,6 +103,7 @@ async def main():
 
     if not SKIP_DOWNLOAD:
         for key in ENVKEY:
+            print(key)
             filename = os.getenv(key)
             if not filename:
                 LOGGER.error(f"{key} not found in .env")
@@ -197,6 +201,26 @@ async def main():
                 "affixId": artifactSet["affixId"],
                 "nameTextMapHash": artifactSet["nameTextMapHash"],
             }
+
+    # Load artifact props (Main & Sub)
+    ARTIFACT_PROPS = []
+    ARTIFACT_PROPS.extend(DATA["ReliquaryMainPropExcelConfigData"])
+    ARTIFACT_PROPS.extend(DATA["ReliquaryAffixExcelConfigData"])
+    PERCENT = ['HURT','CRITICAL','EFFICIENCY','PERCENT','ADD']
+
+    for artifactProps in ARTIFACT_PROPS:
+        if not "artifact_props" in EXPORT_DATA:
+            EXPORT_DATA["artifact_props"] = {}
+
+        # Check percent and get raw value
+        ISPERCENT = artifactProps['propType'].split("_")[-1] in PERCENT
+        RAW = artifactProps.get("propValue", 0)
+
+        EXPORT_DATA["artifact_props"][artifactProps["id"]] = {
+            'propType': artifactProps['propType'],
+            'propDigit': 'PERCENT' if ISPERCENT else 'DIGIT',
+            'propValue': round(RAW * 100, 1) if ISPERCENT else round(RAW)
+        }
         
     # Load weapons
     for weapon in DATA["WeaponExcelConfigData"]:
@@ -382,13 +406,14 @@ async def main():
 
         LOGGER.debug(f"Exporting {key}...")
         await save_data(EXPORT_DATA[key], f"{key}.json", _delKey)
-        await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
+        if not key in SKIP_HASH:
+            await create_lang(EXPORT_DATA[key], f"{key}.json", False if key in ["fight_props"] else True)  
 
     # Push to github
     if not DEVMODE:
         await push_to_github(f"""{last_message}
-    - SHA: {last_commit}
-    - URL: {GITHUB_SITE.format(PATH=f"{USERNAME}/{REPOSITORY}/commit/{last_commit}")}
+    - SHA: *********{last_commit[10:15]}************
+    - URL: [private]
         """)
 
     # Save lastest commit
