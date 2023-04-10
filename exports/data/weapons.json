@@ -811,8 +811,8 @@
     },
     "14505": {
         "nameTextMapHash": 4007372867,
-        "icon": "UI_EquipIcon_Catalyst_Apprentice",
-        "awakenIcon": "UI_EquipIcon_Catalyst_Apprentice_Awaken",
+        "icon": "UI_EquipIcon_Catalyst_Morax",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Morax_Awaken",
         "rankLevel": 5
     },
     "14506": {
