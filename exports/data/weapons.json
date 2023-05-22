@@ -1001,6 +1001,12 @@
         "awakenIcon": "UI_EquipIcon_Bow_Fin_Awaken",
         "rankLevel": 4
     },
+    "15419": {
+        "nameTextMapHash": 316078811,
+        "icon": "UI_EquipIcon_Bow_Ibis",
+        "awakenIcon": "UI_EquipIcon_Bow_Ibis_Awaken",
+        "rankLevel": 4
+    },
     "15501": {
         "nameTextMapHash": 3933622347,
         "icon": "UI_EquipIcon_Bow_Dvalin",

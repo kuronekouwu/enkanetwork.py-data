@@ -143,6 +143,9 @@
     "FIGHT_PROP_SHIELD_COST_MINUS_RATIO": {
         "nameTextMapHash": 195785769
     },
+    "FIGHT_PROP_ELEMENT_ADD_HURT": {
+        "nameTextMapHash": 802161467
+    },
     "FIGHT_PROP_ATTACK_PERCENT_A": {
         "nameTextMapHash": 2796372974
     },
