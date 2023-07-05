@@ -202,5 +202,39 @@
         "IT": "Un nomignolo all'ombra",
         "EN": "A Sobriquet Under Shade",
         "PT": "Identidade Sob a Sombra"
+    },
+    "2343491290": {
+        "FR": "Lumière stellaire en fleurs",
+        "JP": "星燭に揺れる爛花",
+        "CHT": "琪花星燭",
+        "ID": "Blossoming Starlight",
+        "CHS": "琪花星烛",
+        "VI": "Hoa Lửa Rực Rỡ",
+        "ES": "Inocencia chispeante",
+        "TH": "ประกายดาวสะพรั่ง",
+        "TR": "Çiçek Açan Yıldız Işığı",
+        "KR": "크림꽃과 별빛 촛불",
+        "DE": "Blütenreines Sternenlicht",
+        "RU": "Цветущий свет звёзд",
+        "IT": "Luce stellare fiorente",
+        "EN": "Blossoming Starlight",
+        "PT": "Luz Estelar Florescente"
+    },
+    "177626138": {
+        "FR": "Ombre nautique",
+        "JP": "帆影に戯る風",
+        "CHT": "帆影游風",
+        "ID": "Sailwind Shadow",
+        "CHS": "帆影游风",
+        "VI": "Cánh Buồm Lướt Gió",
+        "ES": "Sombra tremolante",
+        "TH": "เงานาวาล่องลม",
+        "TR": "Yelkenli Gölgesi",
+        "KR": "펄럭이는 돛의 그림자",
+        "DE": "Schatten flatternder Segel",
+        "RU": "Тень ветра в парусах",
+        "IT": "Ombra Navigavento",
+        "EN": "Sailwind Shadow",
+        "PT": "Sombra da Vela Tremulante"
     }
 }

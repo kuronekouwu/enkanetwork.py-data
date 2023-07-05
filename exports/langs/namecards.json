@@ -2213,7 +2213,7 @@
         "FR": "Candace - Héronne cendrée",
         "JP": "キャンディス·蒼鷺",
         "CHT": "坎蒂絲·蒼鷺",
-        "ID": "Candace: Grey Heron",
+        "ID": "Candace: Gray Heron",
         "CHS": "坎蒂丝·苍鹭",
         "VI": "Candace - Vạc Trời",
         "ES": "Candace - Garza real",
@@ -2701,5 +2701,22 @@
         "IT": "Appunti di viaggio: Segreti",
         "EN": "Travel Notes: Secrets",
         "PT": "Passe de Batalha: Segredo do Invocador"
+    },
+    "2257348780": {
+        "FR": "PB - Enluminure",
+        "JP": "紀行·溢彩",
+        "CHT": "紀行·溢彩",
+        "ID": "Catatan Perjalanan: Warna-Warni Pencahayaan",
+        "CHS": "纪行·溢彩",
+        "VI": "Nhật Ký Hành Trình - Chói Lọi",
+        "ES": "PB - Esplendor lumínico",
+        "TH": "บันทึก - แสงสีสาดส่อง",
+        "TR": "Gezi Notları: Parlak Aydınlatma",
+        "KR": "기행·눈부신 색채",
+        "DE": "Erlebnispass – Farbenquell",
+        "RU": "Сияющие цвета",
+        "IT": "Appunti di viaggio: Illuminazione vivida",
+        "EN": "Travel Notes: Vivid Illumination",
+        "PT": "Passe de Batalha - Esplendor Colorido"
     }
 }
