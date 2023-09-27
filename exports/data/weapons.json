@@ -197,6 +197,12 @@
         "awakenIcon": "UI_EquipIcon_Sword_Machination_Awaken",
         "rankLevel": 4
     },
+    "11427": {
+        "nameTextMapHash": 1790067483,
+        "icon": "UI_EquipIcon_Sword_Mechanic",
+        "awakenIcon": "UI_EquipIcon_Sword_Mechanic_Awaken",
+        "rankLevel": 4
+    },
     "11501": {
         "nameTextMapHash": 902264035,
         "icon": "UI_EquipIcon_Sword_Falcon",
@@ -431,6 +437,12 @@
         "awakenIcon": "UI_EquipIcon_Claymore_Vorpal_Awaken",
         "rankLevel": 4
     },
+    "12427": {
+        "nameTextMapHash": 3693117451,
+        "icon": "UI_EquipIcon_Claymore_Mechanic",
+        "awakenIcon": "UI_EquipIcon_Claymore_Mechanic_Awaken",
+        "rankLevel": 4
+    },
     "12501": {
         "nameTextMapHash": 1089950259,
         "icon": "UI_EquipIcon_Claymore_Dvalin",
@@ -621,6 +633,12 @@
         "nameTextMapHash": 4158971171,
         "icon": "UI_EquipIcon_Pole_Vorpal",
         "awakenIcon": "UI_EquipIcon_Pole_Vorpal_Awaken",
+        "rankLevel": 4
+    },
+    "13427": {
+        "nameTextMapHash": 882305891,
+        "icon": "UI_EquipIcon_Pole_Mechanic",
+        "awakenIcon": "UI_EquipIcon_Pole_Mechanic_Awaken",
         "rankLevel": 4
     },
     "13501": {
@@ -839,6 +857,12 @@
         "awakenIcon": "UI_EquipIcon_Catalyst_Vorpal_Awaken",
         "rankLevel": 4
     },
+    "14426": {
+        "nameTextMapHash": 2722902043,
+        "icon": "UI_EquipIcon_Catalyst_DandelionPoem",
+        "awakenIcon": "UI_EquipIcon_Catalyst_DandelionPoem_Awaken",
+        "rankLevel": 4
+    },
     "14501": {
         "nameTextMapHash": 807607555,
         "icon": "UI_EquipIcon_Catalyst_Dvalin",
@@ -897,6 +921,18 @@
         "nameTextMapHash": 359484419,
         "icon": "UI_EquipIcon_Catalyst_Alaya",
         "awakenIcon": "UI_EquipIcon_Catalyst_Alaya_Awaken",
+        "rankLevel": 5
+    },
+    "14513": {
+        "nameTextMapHash": 724881171,
+        "icon": "UI_EquipIcon_Catalyst_Wheatley",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Wheatley_Awaken",
+        "rankLevel": 5
+    },
+    "14514": {
+        "nameTextMapHash": 4176923379,
+        "icon": "UI_EquipIcon_Catalyst_Iudex",
+        "awakenIcon": "UI_EquipIcon_Catalyst_Iudex_Awaken",
         "rankLevel": 5
     },
     "15101": {
@@ -1071,6 +1107,12 @@
         "nameTextMapHash": 2600875323,
         "icon": "UI_EquipIcon_Bow_Vorpal",
         "awakenIcon": "UI_EquipIcon_Bow_Vorpal_Awaken",
+        "rankLevel": 4
+    },
+    "15427": {
+        "nameTextMapHash": 1055195035,
+        "icon": "UI_EquipIcon_Bow_Mechanic",
+        "awakenIcon": "UI_EquipIcon_Bow_Mechanic_Awaken",
         "rankLevel": 4
     },
     "15501": {
