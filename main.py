@@ -18,18 +18,18 @@ from utils import (
     save_data
 )
 
-# API GitHub
-GITHUB_SITE = "https://github.com/{PATH}"
-GITHUB = "https://api.github.com/{PATH}"
-RAW_GITHUB = "https://raw.githubusercontent.com/{PATH}"
+# API GIT
+GIT2="https://gitlab.com/api/v4/{PATH}"
+RAW_GIT2 = "https://gitlab.com/{PATH}"
 
 # Logging
 logging.basicConfig(level=logging.DEBUG)
 LOGGER = logging.getLogger(__name__)
 
-# GITHUB 
+# GIT
 USERNAME = os.getenv('GITHUB_USERNAME')
 REPOSITORY = os.getenv('GITHUB_REPOSITORY')
+PROJECT_ID = os.getenv('GITHUB_PROJECT_ID')
 
 # Check is DEV_MODE
 DEVMODE = sys.argv[1] == "dev" if len(sys.argv) > 1 else False
@@ -80,17 +80,18 @@ async def create_lang(data: dict, filename: str = "", has_key_name_hash: bool = 
 async def main():
     EXPORT_DATA = {}
 
-    LOGGER.debug(f"Fetching commits from GitHub [{USERNAME}/{REPOSITORY}]")
-    response = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/commits"))
-    
+    LOGGER.debug(f"Fetching commits from Git. [{USERNAME}/{REPOSITORY}]")
+    response = await request(GIT2.format(PATH=f"/projects/{PROJECT_ID}/repository/commits"))
+    # print(response)
+
     # Check SHA of last commit
-    LOGGER.debug(f"Checking last commit on GitHub...")
+    LOGGER.debug(f"Checking last commit on Git...")
     if len(response) > 0:
-        last_commit = response[0]["sha"]
-        last_message = response[0]["commit"]["message"]
-        LOGGER.debug(f"Last commit on GitHub: {last_commit}")
+        last_commit = response[0]["id"]
+        last_message = response[0]["title"]
+        LOGGER.debug(f"Last commit on Git: {last_commit}")
     else:
-        LOGGER.debug("No commits found on GitHub...")
+        LOGGER.debug("No commits found on Git...")
         last_commit = ""
 
     LOGGER.debug(f"Checking last commit on local...")
@@ -99,7 +100,7 @@ async def main():
         LOGGER.debug(f"Not updated... exiting...")
         return
 
-    LOGGER.debug(f"New commit found on GitHub")
+    LOGGER.debug(f"New commit found on git")
 
     if not SKIP_DOWNLOAD:
         for key in ENVKEY:
@@ -110,7 +111,7 @@ async def main():
                 continue
 
             await download_json(
-                url=RAW_GITHUB.format(PATH=f"{USERNAME}/{REPOSITORY}/master/{os.getenv('FOLDER')}/{filename}"), 
+                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/master/{os.getenv('FOLDER')}/{filename}"), 
                 filename=filename, 
                 path=os.path.join("raw", "data")
             )
@@ -118,10 +119,10 @@ async def main():
     await asyncio.sleep(1)
 
     if not SKIP_DOWNLOAD:
-        langPath = await request(GITHUB.format(PATH=f"repos/{USERNAME}/{REPOSITORY}/contents/{os.getenv('LANG_FOLDER')}"))
+        langPath = await request(GIT2.format(PATH=f"/projects/{PROJECT_ID}/repository/tree?recursive=true&path={os.getenv('LANG_FOLDER')}"))
         for lang in langPath:
             await download_json(
-                url=lang["download_url"],
+                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/master/{lang['path']}"),
                 filename=lang["name"],
                 path=os.path.join("raw", "langs")
             )
