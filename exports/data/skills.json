@@ -1779,6 +1779,41 @@
         "skillIcon": "Skill_E_Neuvillette_01",
         "proudSkillGroupId": 8739
     },
+    "10881": {
+        "nameTextMapHash": 2401741477,
+        "skillIcon": "Skill_A_Catalyst_MD",
+        "proudSkillGroupId": 8831
+    },
+    "10882": {
+        "nameTextMapHash": 3157868725,
+        "skillIcon": "Skill_S_Charlotte_01",
+        "proudSkillGroupId": 8832
+    },
+    "10885": {
+        "nameTextMapHash": 3217089605,
+        "skillIcon": "Skill_E_Charlotte_01",
+        "proudSkillGroupId": 8839
+    },
+    "10891": {
+        "nameTextMapHash": 4233347141,
+        "skillIcon": "Skill_A_01",
+        "proudSkillGroupId": 8931
+    },
+    "10892": {
+        "nameTextMapHash": 3819525205,
+        "skillIcon": "Skill_S_Furina_01",
+        "proudSkillGroupId": 8932
+    },
+    "10893": {
+        "nameTextMapHash": 484674685,
+        "skillIcon": "Skill_S_Furina_02",
+        "proudSkillGroupId": ""
+    },
+    "10895": {
+        "nameTextMapHash": 1469226733,
+        "skillIcon": "Skill_E_Furina_01",
+        "proudSkillGroupId": 8939
+    },
     "20001": {
         "nameTextMapHash": 1936482797,
         "skillIcon": "Skill_A_Dvalin_AirGun",
@@ -1946,7 +1981,7 @@
     },
     "20063": {
         "nameTextMapHash": 1137915773,
-        "skillIcon": "Btn_BounceConjuring_Hit_A_01",
+        "skillIcon": "Skill_Diving_Octopus",
         "proudSkillGroupId": ""
     },
     "20064": {
@@ -1962,6 +1997,11 @@
     "20066": {
         "nameTextMapHash": 2221461965,
         "skillIcon": "Btn_HideAndSeek_Seeker_S_01",
+        "proudSkillGroupId": ""
+    },
+    "20067": {
+        "nameTextMapHash": 555050885,
+        "skillIcon": "Skill_Diving_Octopus",
         "proudSkillGroupId": ""
     },
     "20070": {
@@ -2812,6 +2852,16 @@
     "5087010": {
         "nameTextMapHash": 3370753429,
         "skillIcon": "Skill_A_Catalyst_MD",
+        "proudSkillGroupId": ""
+    },
+    "5088010": {
+        "nameTextMapHash": 3339419557,
+        "skillIcon": "Skill_A_Catalyst_MD",
+        "proudSkillGroupId": ""
+    },
+    "5089010": {
+        "nameTextMapHash": 3507937933,
+        "skillIcon": "Skill_A_01",
         "proudSkillGroupId": ""
     }
 }

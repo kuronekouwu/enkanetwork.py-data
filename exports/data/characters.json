@@ -1722,5 +1722,45 @@
             875,
             876
         ]
+    },
+    "10000088": {
+        "nameTextMapHash": 3831162130,
+        "iconName": "UI_AvatarIcon_Charlotte",
+        "sideIconName": "UI_AvatarIcon_Side_Charlotte",
+        "qualityType": "QUALITY_PURPLE",
+        "costElemType": "Ice",
+        "skills": [
+            10881,
+            10882,
+            10885
+        ],
+        "talents": [
+            881,
+            882,
+            883,
+            884,
+            885,
+            886
+        ]
+    },
+    "10000089": {
+        "nameTextMapHash": 2180900234,
+        "iconName": "UI_AvatarIcon_Furina",
+        "sideIconName": "UI_AvatarIcon_Side_Furina",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Water",
+        "skills": [
+            10891,
+            10892,
+            10895
+        ],
+        "talents": [
+            891,
+            892,
+            893,
+            894,
+            895,
+            896
+        ]
     }
 }

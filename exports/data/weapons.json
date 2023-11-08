@@ -203,6 +203,18 @@
         "awakenIcon": "UI_EquipIcon_Sword_Mechanic_Awaken",
         "rankLevel": 4
     },
+    "11428": {
+        "nameTextMapHash": 3016493955,
+        "icon": "UI_EquipIcon_Sword_Purewill",
+        "awakenIcon": "UI_EquipIcon_Sword_Purewill",
+        "rankLevel": 4
+    },
+    "11429": {
+        "nameTextMapHash": 594850707,
+        "icon": "UI_EquipIcon_Sword_Purewill",
+        "awakenIcon": "UI_EquipIcon_Sword_Purewill",
+        "rankLevel": 4
+    },
     "11501": {
         "nameTextMapHash": 902264035,
         "icon": "UI_EquipIcon_Sword_Falcon",
@@ -273,6 +285,12 @@
         "nameTextMapHash": 275622963,
         "icon": "UI_EquipIcon_Sword_Ayus",
         "awakenIcon": "UI_EquipIcon_Sword_Ayus_Awaken",
+        "rankLevel": 5
+    },
+    "11513": {
+        "nameTextMapHash": 1473399443,
+        "icon": "UI_EquipIcon_Sword_Regalis",
+        "awakenIcon": "UI_EquipIcon_Sword_Regalis_Awaken",
         "rankLevel": 5
     },
     "12101": {

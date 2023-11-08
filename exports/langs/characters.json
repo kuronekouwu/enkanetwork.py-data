@@ -1256,5 +1256,39 @@
         "TH": "Neuvillette",
         "TR": "Neuvillette",
         "VI": "Neuvillette"
+    },
+    "3831162130": {
+        "CHS": "夏洛蒂",
+        "CHT": "夏洛蒂",
+        "DE": "Charlotte",
+        "EN": "Charlotte",
+        "ES": "Charlotte",
+        "FR": "Charlotte",
+        "ID": "Charlotte",
+        "IT": "Charlotte",
+        "JP": "シャルロット",
+        "KR": "샤를로트",
+        "PT": "Charlotte",
+        "RU": "Шарлотта",
+        "TH": "Charlotte",
+        "TR": "Charlotte",
+        "VI": "Charlotte"
+    },
+    "2180900234": {
+        "CHS": "芙宁娜",
+        "CHT": "芙寧娜",
+        "DE": "Furina",
+        "EN": "Furina",
+        "ES": "Furina",
+        "FR": "Furina",
+        "ID": "Furina",
+        "IT": "Furina",
+        "JP": "フリーナ",
+        "KR": "푸리나",
+        "PT": "Furina",
+        "RU": "Фурина",
+        "TH": "Furina",
+        "TR": "Furina",
+        "VI": "Furina"
     }
 }
