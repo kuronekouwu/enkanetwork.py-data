@@ -1788,5 +1788,95 @@
         ],
         "rankLevel": 4,
         "materialType": "MATERIAL_NAMECARD"
+    },
+    "210184": {
+        "nameTextMapHash": 4045353212,
+        "icon": "UI_NameCardIcon_Navia",
+        "picPath": [
+            "UI_NameCardPic_Navia_Alpha",
+            "UI_NameCardPic_Navia_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210185": {
+        "nameTextMapHash": 3595817204,
+        "icon": "UI_NameCardIcon_Chevreuse",
+        "picPath": [
+            "UI_NameCardPic_Chevreuse_Alpha",
+            "UI_NameCardPic_Chevreuse_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210186": {
+        "nameTextMapHash": 1957949780,
+        "icon": "UI_NameCardIcon_Bp29",
+        "picPath": [
+            "UI_NameCardPic_Bp29_Alpha",
+            "UI_NameCardPic_Bp29_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210187": {
+        "nameTextMapHash": 1130858180,
+        "icon": "UI_NameCardIcon_Liuyun",
+        "picPath": [
+            "UI_NameCardPic_Liuyun_Alpha",
+            "UI_NameCardPic_Liuyun_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210188": {
+        "nameTextMapHash": 2811359836,
+        "icon": "UI_NameCardIcon_Gaming",
+        "picPath": [
+            "UI_NameCardPic_Gaming_Alpha",
+            "UI_NameCardPic_Gaming_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210189": {
+        "nameTextMapHash": 1631438412,
+        "icon": "UI_NameCardIcon_Chenyu1",
+        "picPath": [
+            "UI_NameCardPic_Chenyu1_Alpha",
+            "UI_NameCardPic_Chenyu1_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210190": {
+        "nameTextMapHash": 2708620900,
+        "icon": "UI_NameCardIcon_OfferingSilong",
+        "picPath": [
+            "UI_NameCardPic_OfferingSilong_Alpha",
+            "UI_NameCardPic_OfferingSilong_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210191": {
+        "nameTextMapHash": 1868468372,
+        "icon": "UI_NameCardIcon_Bp30",
+        "picPath": [
+            "UI_NameCardPic_Bp30_Alpha",
+            "UI_NameCardPic_Bp30_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210192": {
+        "nameTextMapHash": 1212836964,
+        "icon": "UI_NameCardIcon_OST4",
+        "picPath": [
+            "UI_NameCardPic_OST4_Alpha",
+            "UI_NameCardPic_OST4_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
     }
 }

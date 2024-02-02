@@ -1814,6 +1814,91 @@
         "skillIcon": "Skill_E_Furina_01",
         "proudSkillGroupId": 8939
     },
+    "10901": {
+        "nameTextMapHash": 1264627869,
+        "skillIcon": "Skill_A_03",
+        "proudSkillGroupId": 9031
+    },
+    "10902": {
+        "nameTextMapHash": 2811155029,
+        "skillIcon": "Skill_S_Chevreuse_01",
+        "proudSkillGroupId": 9032
+    },
+    "10905": {
+        "nameTextMapHash": 1517901117,
+        "skillIcon": "Skill_E_Chevreuse_01",
+        "proudSkillGroupId": 9039
+    },
+    "10911": {
+        "nameTextMapHash": 2696840005,
+        "skillIcon": "Skill_A_04",
+        "proudSkillGroupId": 9131
+    },
+    "10912": {
+        "nameTextMapHash": 4005542485,
+        "skillIcon": "Skill_S_Navia_01",
+        "proudSkillGroupId": 9132
+    },
+    "10915": {
+        "nameTextMapHash": 3301203725,
+        "skillIcon": "Skill_E_Navia_01",
+        "proudSkillGroupId": 9139
+    },
+    "10921": {
+        "nameTextMapHash": 526099557,
+        "skillIcon": "Skill_A_04",
+        "proudSkillGroupId": 9231
+    },
+    "10922": {
+        "nameTextMapHash": 2601302837,
+        "skillIcon": "Skill_S_Gaming_01",
+        "proudSkillGroupId": 9232
+    },
+    "10923": {
+        "nameTextMapHash": 606672925,
+        "skillIcon": "Skill_S_Gaming_02",
+        "proudSkillGroupId": ""
+    },
+    "10925": {
+        "nameTextMapHash": 2764774957,
+        "skillIcon": "Skill_E_Gaming_01",
+        "proudSkillGroupId": 9239
+    },
+    "10931": {
+        "nameTextMapHash": 3031546037,
+        "skillIcon": "Skill_A_Catalyst_MD",
+        "proudSkillGroupId": 9331
+    },
+    "10932": {
+        "nameTextMapHash": 418524149,
+        "skillIcon": "Skill_S_Liuyun_01",
+        "proudSkillGroupId": 9332
+    },
+    "10933": {
+        "nameTextMapHash": 4283666085,
+        "skillIcon": "Skill_S_Liuyun_02",
+        "proudSkillGroupId": ""
+    },
+    "10936": {
+        "nameTextMapHash": 3417831997,
+        "skillIcon": "Skill_S_Liuyun_03",
+        "proudSkillGroupId": ""
+    },
+    "10937": {
+        "nameTextMapHash": 2928796237,
+        "skillIcon": "Skill_S_Liuyun_05",
+        "proudSkillGroupId": ""
+    },
+    "10934": {
+        "nameTextMapHash": 2438850773,
+        "skillIcon": "Skill_S_Liuyun_04",
+        "proudSkillGroupId": ""
+    },
+    "10935": {
+        "nameTextMapHash": 2968788269,
+        "skillIcon": "Skill_E_Liuyun_01",
+        "proudSkillGroupId": 9339
+    },
     "20001": {
         "nameTextMapHash": 1936482797,
         "skillIcon": "Skill_A_Dvalin_AirGun",
@@ -2014,6 +2099,21 @@
         "skillIcon": "QuesteventSkillIcon_01",
         "proudSkillGroupId": ""
     },
+    "20077": {
+        "nameTextMapHash": 3494458077,
+        "skillIcon": "Skill_LanV4PartyLion_01",
+        "proudSkillGroupId": ""
+    },
+    "20083": {
+        "nameTextMapHash": 4248326901,
+        "skillIcon": "Skill_LanV4PartyLion_01",
+        "proudSkillGroupId": ""
+    },
+    "20084": {
+        "nameTextMapHash": 682415765,
+        "skillIcon": "Skill_LanV4PartyLion_01",
+        "proudSkillGroupId": ""
+    },
     "20100": {
         "nameTextMapHash": 4176490093,
         "skillIcon": "Btn_HideAndSeek_Seeker_A_01",
@@ -2202,6 +2302,31 @@
     "20526": {
         "nameTextMapHash": 1656473773,
         "skillIcon": "Btn_HideAndSeek_Hider_A_03",
+        "proudSkillGroupId": ""
+    },
+    "20527": {
+        "nameTextMapHash": 1965439645,
+        "skillIcon": "Skill_CarpJump_02",
+        "proudSkillGroupId": ""
+    },
+    "20528": {
+        "nameTextMapHash": 2424782373,
+        "skillIcon": "Skill_C_FairyGadgetSet",
+        "proudSkillGroupId": ""
+    },
+    "20529": {
+        "nameTextMapHash": 3249128429,
+        "skillIcon": "Btn_Fishing_Exit",
+        "proudSkillGroupId": ""
+    },
+    "20530": {
+        "nameTextMapHash": 1265889117,
+        "skillIcon": "Skill_CarpJump_01",
+        "proudSkillGroupId": ""
+    },
+    "20531": {
+        "nameTextMapHash": 1873021445,
+        "skillIcon": "Btn_Fishing_Exit",
         "proudSkillGroupId": ""
     },
     "20311": {
@@ -2862,6 +2987,26 @@
     "5089010": {
         "nameTextMapHash": 3507937933,
         "skillIcon": "Skill_A_01",
+        "proudSkillGroupId": ""
+    },
+    "5090010": {
+        "nameTextMapHash": 1182583677,
+        "skillIcon": "Skill_A_03",
+        "proudSkillGroupId": ""
+    },
+    "5091010": {
+        "nameTextMapHash": 1292719181,
+        "skillIcon": "Skill_A_04",
+        "proudSkillGroupId": ""
+    },
+    "5092010": {
+        "nameTextMapHash": 2897573949,
+        "skillIcon": "Skill_A_04",
+        "proudSkillGroupId": ""
+    },
+    "5093010": {
+        "nameTextMapHash": 345620165,
+        "skillIcon": "Skill_A_Catalyst_MD",
         "proudSkillGroupId": ""
     }
 }

@@ -1762,5 +1762,85 @@
             895,
             896
         ]
+    },
+    "10000090": {
+        "nameTextMapHash": 540313842,
+        "iconName": "UI_AvatarIcon_Chevreuse",
+        "sideIconName": "UI_AvatarIcon_Side_Chevreuse",
+        "qualityType": "QUALITY_PURPLE",
+        "costElemType": "Fire",
+        "skills": [
+            10901,
+            10902,
+            10905
+        ],
+        "talents": [
+            901,
+            902,
+            903,
+            904,
+            905,
+            906
+        ]
+    },
+    "10000091": {
+        "nameTextMapHash": 2877588578,
+        "iconName": "UI_AvatarIcon_Navia",
+        "sideIconName": "UI_AvatarIcon_Side_Navia",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Rock",
+        "skills": [
+            10911,
+            10912,
+            10915
+        ],
+        "talents": [
+            911,
+            912,
+            913,
+            914,
+            915,
+            916
+        ]
+    },
+    "10000092": {
+        "nameTextMapHash": 2822240322,
+        "iconName": "UI_AvatarIcon_Gaming",
+        "sideIconName": "UI_AvatarIcon_Side_Gaming",
+        "qualityType": "QUALITY_PURPLE",
+        "costElemType": "Fire",
+        "skills": [
+            10921,
+            10922,
+            10925
+        ],
+        "talents": [
+            921,
+            922,
+            923,
+            924,
+            925,
+            926
+        ]
+    },
+    "10000093": {
+        "nameTextMapHash": 3648220770,
+        "iconName": "UI_AvatarIcon_Liuyun",
+        "sideIconName": "UI_AvatarIcon_Side_Liuyun",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Wind",
+        "skills": [
+            10931,
+            10932,
+            10935
+        ],
+        "talents": [
+            931,
+            932,
+            933,
+            934,
+            935,
+            936
+        ]
     }
 }

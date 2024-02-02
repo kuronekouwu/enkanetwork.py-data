@@ -111,7 +111,7 @@ async def main():
                 continue
 
             await download_json(
-                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/master/{os.getenv('FOLDER')}/{filename}"), 
+                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/main/{os.getenv('FOLDER')}/{filename}"), 
                 filename=filename, 
                 path=os.path.join("raw", "data")
             )
@@ -122,7 +122,7 @@ async def main():
         langPath = await request(GIT2.format(PATH=f"/projects/{PROJECT_ID}/repository/tree?recursive=true&path={os.getenv('LANG_FOLDER')}"))
         for lang in langPath:
             await download_json(
-                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/master/{lang['path']}"),
+                url=RAW_GIT2.format(PATH=f"{USERNAME}/{REPOSITORY}/-/raw/main/{lang['path']}"),
                 filename=lang["name"],
                 path=os.path.join("raw", "langs")
             )

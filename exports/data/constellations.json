@@ -1894,5 +1894,101 @@
     "896": {
         "nameTextMapHash": 3889320921,
         "icon": "UI_Talent_S_Furina_02"
+    },
+    "901": {
+        "nameTextMapHash": 398920769,
+        "icon": "UI_Talent_S_Chevreuse_01"
+    },
+    "902": {
+        "nameTextMapHash": 2697538289,
+        "icon": "UI_Talent_S_Chevreuse_02"
+    },
+    "903": {
+        "nameTextMapHash": 2071053617,
+        "icon": "UI_Talent_U_Chevreuse_01"
+    },
+    "904": {
+        "nameTextMapHash": 737124137,
+        "icon": "UI_Talent_S_Chevreuse_03"
+    },
+    "905": {
+        "nameTextMapHash": 4209804241,
+        "icon": "UI_Talent_U_Chevreuse_02"
+    },
+    "906": {
+        "nameTextMapHash": 3915841073,
+        "icon": "UI_Talent_S_Chevreuse_04"
+    },
+    "911": {
+        "nameTextMapHash": 3689024969,
+        "icon": "UI_Talent_S_Navia_01"
+    },
+    "912": {
+        "nameTextMapHash": 4246729273,
+        "icon": "UI_Talent_S_Navia_02"
+    },
+    "913": {
+        "nameTextMapHash": 4008218041,
+        "icon": "UI_Talent_U_Navia_01"
+    },
+    "914": {
+        "nameTextMapHash": 3461445297,
+        "icon": "UI_Talent_S_Navia_03"
+    },
+    "915": {
+        "nameTextMapHash": 3983244161,
+        "icon": "UI_Talent_U_Navia_02"
+    },
+    "916": {
+        "nameTextMapHash": 4110233153,
+        "icon": "UI_Talent_S_Navia_04"
+    },
+    "921": {
+        "nameTextMapHash": 4018877873,
+        "icon": "UI_Talent_S_Gaming_01"
+    },
+    "922": {
+        "nameTextMapHash": 246603977,
+        "icon": "UI_Talent_S_Gaming_02"
+    },
+    "923": {
+        "nameTextMapHash": 4116318089,
+        "icon": "UI_Talent_U_Gaming_01"
+    },
+    "924": {
+        "nameTextMapHash": 4187766889,
+        "icon": "UI_Talent_S_Gaming_03"
+    },
+    "925": {
+        "nameTextMapHash": 3549980385,
+        "icon": "UI_Talent_U_Gaming_02"
+    },
+    "926": {
+        "nameTextMapHash": 3486976633,
+        "icon": "UI_Talent_S_Gaming_04"
+    },
+    "931": {
+        "nameTextMapHash": 1584930553,
+        "icon": "UI_Talent_S_Liuyun_01"
+    },
+    "932": {
+        "nameTextMapHash": 94680617,
+        "icon": "UI_Talent_S_Liuyun_02"
+    },
+    "933": {
+        "nameTextMapHash": 3143851073,
+        "icon": "UI_Talent_U_Liuyun_02"
+    },
+    "934": {
+        "nameTextMapHash": 301585425,
+        "icon": "UI_Talent_S_Liuyun_03"
+    },
+    "935": {
+        "nameTextMapHash": 2080335137,
+        "icon": "UI_Talent_U_Liuyun_01"
+    },
+    "936": {
+        "nameTextMapHash": 3383313401,
+        "icon": "UI_Talent_S_Liuyun_04"
     }
 }
