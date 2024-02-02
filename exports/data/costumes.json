@@ -68,5 +68,20 @@
         "iconName": "UI_AvatarIcon_KaeyaCostumeDancer",
         "sideIconName": "UI_AvatarIcon_Side_KaeyaCostumeDancer",
         "nameTextMapHash": 177626138
+    },
+    "206301": {
+        "iconName": "UI_AvatarIcon_ShenheCostumeDai",
+        "sideIconName": "UI_AvatarIcon_Side_ShenheCostumeDai",
+        "nameTextMapHash": 945735386
+    },
+    "203701": {
+        "iconName": "UI_AvatarIcon_GanyuCostumeYu",
+        "sideIconName": "UI_AvatarIcon_Side_GanyuCostumeYu",
+        "nameTextMapHash": 1442607890
+    },
+    "202501": {
+        "iconName": "UI_AvatarIcon_XingqiuCostumeBamboo",
+        "sideIconName": "UI_AvatarIcon_Side_XingqiuCostumeBamboo",
+        "nameTextMapHash": 1935444386
     }
 }

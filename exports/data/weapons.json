@@ -455,6 +455,12 @@
         "awakenIcon": "UI_EquipIcon_Claymore_Vorpal_Awaken",
         "rankLevel": 4
     },
+    "12426": {
+        "nameTextMapHash": 933442195,
+        "icon": "UI_EquipIcon_Claymore_Champion",
+        "awakenIcon": "UI_EquipIcon_Claymore_Champion_Awaken",
+        "rankLevel": 4
+    },
     "12427": {
         "nameTextMapHash": 3693117451,
         "icon": "UI_EquipIcon_Claymore_Mechanic",
@@ -519,6 +525,12 @@
         "nameTextMapHash": 2834063555,
         "icon": "UI_EquipIcon_Claymore_Deshret",
         "awakenIcon": "UI_EquipIcon_Claymore_Deshret_Awaken",
+        "rankLevel": 5
+    },
+    "12512": {
+        "nameTextMapHash": 3812523339,
+        "icon": "UI_EquipIcon_Claymore_GoldenVerdict",
+        "awakenIcon": "UI_EquipIcon_Claymore_GoldenVerdict_Awaken",
         "rankLevel": 5
     },
     "13101": {
@@ -951,6 +963,12 @@
         "nameTextMapHash": 4176923379,
         "icon": "UI_EquipIcon_Catalyst_Iudex",
         "awakenIcon": "UI_EquipIcon_Catalyst_Iudex_Awaken",
+        "rankLevel": 5
+    },
+    "14515": {
+        "nameTextMapHash": 3660626387,
+        "icon": "UI_EquipIcon_Catalyst_MountainGale",
+        "awakenIcon": "UI_EquipIcon_Catalyst_MountainGale_Awaken",
         "rankLevel": 5
     },
     "15101": {
