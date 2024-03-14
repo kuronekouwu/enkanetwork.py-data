@@ -1899,6 +1899,26 @@
         "skillIcon": "Skill_E_Liuyun_01",
         "proudSkillGroupId": 9339
     },
+    "10941": {
+        "nameTextMapHash": 914798901,
+        "skillIcon": "Skill_A_01",
+        "proudSkillGroupId": 9431
+    },
+    "10942": {
+        "nameTextMapHash": 2315821309,
+        "skillIcon": "Skill_S_Chiori_01",
+        "proudSkillGroupId": 9432
+    },
+    "10944": {
+        "nameTextMapHash": 2873692477,
+        "skillIcon": "Skill_S_Chiori_03",
+        "proudSkillGroupId": ""
+    },
+    "10945": {
+        "nameTextMapHash": 373425821,
+        "skillIcon": "Skill_E_Chiori_01",
+        "proudSkillGroupId": 9439
+    },
     "20001": {
         "nameTextMapHash": 1936482797,
         "skillIcon": "Skill_A_Dvalin_AirGun",
@@ -2114,6 +2134,16 @@
         "skillIcon": "Skill_LanV4PartyLion_01",
         "proudSkillGroupId": ""
     },
+    "20093": {
+        "nameTextMapHash": 3906587141,
+        "skillIcon": "Btn_SlimeCannon_Fire_01",
+        "proudSkillGroupId": ""
+    },
+    "20094": {
+        "nameTextMapHash": 2428119293,
+        "skillIcon": "Btn_SlimeCannon_Fire_04",
+        "proudSkillGroupId": ""
+    },
     "20100": {
         "nameTextMapHash": 4176490093,
         "skillIcon": "Btn_HideAndSeek_Seeker_A_01",
@@ -2206,12 +2236,12 @@
     },
     "20400": {
         "nameTextMapHash": 2657714069,
-        "skillIcon": "Btn_HideAndSeek_Seeker_A_01",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_S",
         "proudSkillGroupId": ""
     },
     "20401": {
         "nameTextMapHash": 66214933,
-        "skillIcon": "Btn_HideAndSeek_Seeker_A_01",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_S",
         "proudSkillGroupId": ""
     },
     "20410": {
@@ -2221,7 +2251,7 @@
     },
     "20411": {
         "nameTextMapHash": 1752388581,
-        "skillIcon": "Btn_HideAndSeek_Seeker_S_02",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_A_02",
         "proudSkillGroupId": ""
     },
     "20420": {
@@ -2231,12 +2261,12 @@
     },
     "20421": {
         "nameTextMapHash": 1050865533,
-        "skillIcon": "Btn_HideAndSeek_Seeker_E_02",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_E_02",
         "proudSkillGroupId": ""
     },
     "20422": {
         "nameTextMapHash": 2689008917,
-        "skillIcon": "Btn_HideAndSeek_Seeker_E_03",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_E_01",
         "proudSkillGroupId": ""
     },
     "20500": {
@@ -2251,7 +2281,7 @@
     },
     "20510": {
         "nameTextMapHash": 2713313077,
-        "skillIcon": "Btn_HideAndSeek_Hider_S_01",
+        "skillIcon": "Btn_HideAndSeekV4_Hider_A_01",
         "proudSkillGroupId": ""
     },
     "20512": {
@@ -2271,7 +2301,7 @@
     },
     "20520": {
         "nameTextMapHash": 2680677653,
-        "skillIcon": "Btn_HideAndSeek_Hider_E_01",
+        "skillIcon": "Btn_HideAndSeekV4_Hider_E",
         "proudSkillGroupId": ""
     },
     "20521": {
@@ -2286,12 +2316,12 @@
     },
     "20523": {
         "nameTextMapHash": 2450340517,
-        "skillIcon": "UI_Icon_Skill_Prey_Invisible_Bait",
+        "skillIcon": "Btn_HideAndSeekV4_Hider_A_02",
         "proudSkillGroupId": ""
     },
     "20524": {
         "nameTextMapHash": 1356540013,
-        "skillIcon": "Btn_HideAndSeek_Seeker_S_01",
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_A_01",
         "proudSkillGroupId": ""
     },
     "20525": {
@@ -3007,6 +3037,11 @@
     "5093010": {
         "nameTextMapHash": 345620165,
         "skillIcon": "Skill_A_Catalyst_MD",
+        "proudSkillGroupId": ""
+    },
+    "5094010": {
+        "nameTextMapHash": 331992085,
+        "skillIcon": "Skill_A_01",
         "proudSkillGroupId": ""
     }
 }

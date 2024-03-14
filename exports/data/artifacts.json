@@ -32942,11 +32942,11 @@
     "23699": {
         "nameTextMapHash": 1942586956,
         "itemType": "ITEM_RELIQUARY",
-        "equipType": "EQUIP_BRACER",
-        "icon": "UI_RelicIcon_15032_4",
-        "rankLevel": 4,
-        "mainPropDepotId": 4000,
-        "appendPropDepotId": 962
+        "equipType": "EQUIP_SHOES",
+        "icon": "UI_RelicIcon_15032_5",
+        "rankLevel": 5,
+        "mainPropDepotId": 1097,
+        "appendPropDepotId": 963
     },
     "23700": {
         "nameTextMapHash": 3731624444,
@@ -33025,8 +33025,8 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_DRESS",
         "icon": "UI_RelicIcon_15033_3",
-        "rankLevel": 4,
-        "mainPropDepotId": 3094,
+        "rankLevel": 5,
+        "mainPropDepotId": 3099,
         "appendPropDepotId": 965
     },
     "23709": {
@@ -33043,8 +33043,8 @@
         "itemType": "ITEM_RELIQUARY",
         "equipType": "EQUIP_SHOES",
         "icon": "UI_RelicIcon_15033_5",
-        "rankLevel": 4,
-        "mainPropDepotId": 1096,
+        "rankLevel": 5,
+        "mainPropDepotId": 1098,
         "appendPropDepotId": 963
     },
     "23711": {

@@ -293,6 +293,12 @@
         "awakenIcon": "UI_EquipIcon_Sword_Regalis_Awaken",
         "rankLevel": 5
     },
+    "11514": {
+        "nameTextMapHash": 1818340435,
+        "icon": "UI_EquipIcon_Sword_Needle",
+        "awakenIcon": "UI_EquipIcon_Sword_Needle_Awaken",
+        "rankLevel": 5
+    },
     "12101": {
         "nameTextMapHash": 2666951267,
         "icon": "UI_EquipIcon_Claymore_Aniki",
@@ -663,6 +669,12 @@
         "nameTextMapHash": 4158971171,
         "icon": "UI_EquipIcon_Pole_Vorpal",
         "awakenIcon": "UI_EquipIcon_Pole_Vorpal_Awaken",
+        "rankLevel": 4
+    },
+    "13426": {
+        "nameTextMapHash": 2847771107,
+        "icon": "UI_EquipIcon_Pole_Caduceus",
+        "awakenIcon": "UI_EquipIcon_Pole_Caduceus_Awaken",
         "rankLevel": 4
     },
     "13427": {

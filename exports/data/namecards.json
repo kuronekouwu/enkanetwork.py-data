@@ -1878,5 +1878,25 @@
         ],
         "rankLevel": 4,
         "materialType": "MATERIAL_NAMECARD"
+    },
+    "210193": {
+        "nameTextMapHash": 3292114052,
+        "icon": "UI_NameCardIcon_Chiori",
+        "picPath": [
+            "UI_NameCardPic_Chiori_Alpha",
+            "UI_NameCardPic_Chiori_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210194": {
+        "nameTextMapHash": 882758588,
+        "icon": "UI_NameCardIcon_Bp31",
+        "picPath": [
+            "UI_NameCardPic_Bp31_Alpha",
+            "UI_NameCardPic_Bp31_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
     }
 }
