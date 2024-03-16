@@ -1842,5 +1842,25 @@
             935,
             936
         ]
+    },
+    "10000094": {
+        "nameTextMapHash": 1944606922,
+        "iconName": "UI_AvatarIcon_Chiori",
+        "sideIconName": "UI_AvatarIcon_Side_Chiori",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Rock",
+        "skills": [
+            10941,
+            10942,
+            10945
+        ],
+        "talents": [
+            941,
+            942,
+            943,
+            944,
+            945,
+            946
+        ]
     }
 }
