@@ -1919,6 +1919,36 @@
         "skillIcon": "Skill_E_Chiori_01",
         "proudSkillGroupId": 9439
     },
+    "10961": {
+        "nameTextMapHash": 3395884205,
+        "skillIcon": "Skill_A_03",
+        "proudSkillGroupId": 9631
+    },
+    "10962": {
+        "nameTextMapHash": 88213301,
+        "skillIcon": "Skill_S_Arlecchino_01",
+        "proudSkillGroupId": 9632
+    },
+    "10963": {
+        "nameTextMapHash": 1398698245,
+        "skillIcon": "Skill_S_Arlecchino_01",
+        "proudSkillGroupId": ""
+    },
+    "10965": {
+        "nameTextMapHash": 2156811133,
+        "skillIcon": "Skill_E_Arlecchino_01",
+        "proudSkillGroupId": 9639
+    },
+    "10966": {
+        "nameTextMapHash": 3589496853,
+        "skillIcon": "Skill_A_03",
+        "proudSkillGroupId": ""
+    },
+    "10967": {
+        "nameTextMapHash": 4257022253,
+        "skillIcon": "Skill_A_03",
+        "proudSkillGroupId": ""
+    },
     "20001": {
         "nameTextMapHash": 1936482797,
         "skillIcon": "Skill_A_Dvalin_AirGun",
@@ -2124,6 +2154,11 @@
         "skillIcon": "Skill_LanV4PartyLion_01",
         "proudSkillGroupId": ""
     },
+    "20081": {
+        "nameTextMapHash": 845866237,
+        "skillIcon": "Skill_Music",
+        "proudSkillGroupId": ""
+    },
     "20083": {
         "nameTextMapHash": 4248326901,
         "skillIcon": "Skill_LanV4PartyLion_01",
@@ -2132,6 +2167,11 @@
     "20084": {
         "nameTextMapHash": 682415765,
         "skillIcon": "Skill_LanV4PartyLion_01",
+        "proudSkillGroupId": ""
+    },
+    "20086": {
+        "nameTextMapHash": 4251923773,
+        "skillIcon": "Skill_Music",
         "proudSkillGroupId": ""
     },
     "20093": {
@@ -2359,6 +2399,46 @@
         "skillIcon": "Btn_Fishing_Exit",
         "proudSkillGroupId": ""
     },
+    "20532": {
+        "nameTextMapHash": 1819872509,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_A_03",
+        "proudSkillGroupId": ""
+    },
+    "20533": {
+        "nameTextMapHash": 4151065125,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_E_03",
+        "proudSkillGroupId": ""
+    },
+    "20534": {
+        "nameTextMapHash": 1658286853,
+        "skillIcon": "Btn_HideAndSeekV4_Hider_S",
+        "proudSkillGroupId": ""
+    },
+    "20535": {
+        "nameTextMapHash": 164728021,
+        "skillIcon": "Btn_HideAndSeekV4_Hider_S",
+        "proudSkillGroupId": ""
+    },
+    "20538": {
+        "nameTextMapHash": 2797265765,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_E_01",
+        "proudSkillGroupId": ""
+    },
+    "20539": {
+        "nameTextMapHash": 351406893,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_S",
+        "proudSkillGroupId": ""
+    },
+    "20540": {
+        "nameTextMapHash": 1185389325,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_S",
+        "proudSkillGroupId": ""
+    },
+    "20541": {
+        "nameTextMapHash": 3465751389,
+        "skillIcon": "Btn_HideAndSeekV4_Seeker_A_01",
+        "proudSkillGroupId": ""
+    },
     "20311": {
         "nameTextMapHash": 467388069,
         "skillIcon": "Btn_Fishing_Cast",
@@ -2437,6 +2517,11 @@
     "20345": {
         "nameTextMapHash": 1316655253,
         "skillIcon": "Btn_PacMan",
+        "proudSkillGroupId": ""
+    },
+    "20346": {
+        "nameTextMapHash": 840915861,
+        "skillIcon": "Btn_Whale_Interrupt",
         "proudSkillGroupId": ""
     },
     "20350": {
@@ -3042,6 +3127,11 @@
     "5094010": {
         "nameTextMapHash": 331992085,
         "skillIcon": "Skill_A_01",
+        "proudSkillGroupId": ""
+    },
+    "5096010": {
+        "nameTextMapHash": 2699549653,
+        "skillIcon": "Skill_A_03",
         "proudSkillGroupId": ""
     }
 }

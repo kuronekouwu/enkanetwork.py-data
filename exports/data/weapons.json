@@ -737,6 +737,12 @@
         "awakenIcon": "UI_EquipIcon_Pole_Deshret_Awaken",
         "rankLevel": 5
     },
+    "13512": {
+        "nameTextMapHash": 2944936683,
+        "icon": "UI_EquipIcon_Pole_BloodMoon",
+        "awakenIcon": "UI_EquipIcon_Pole_BloodMoon_Awaken",
+        "rankLevel": 5
+    },
     "14101": {
         "nameTextMapHash": 3584825427,
         "icon": "UI_EquipIcon_Catalyst_Apprentice",

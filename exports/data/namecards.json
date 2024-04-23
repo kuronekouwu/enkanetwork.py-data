@@ -1898,5 +1898,55 @@
         ],
         "rankLevel": 4,
         "materialType": "MATERIAL_NAMECARD"
+    },
+    "210195": {
+        "nameTextMapHash": 89079668,
+        "icon": "UI_NameCardIcon_Arlecchino",
+        "picPath": [
+            "UI_NameCardPic_Arlecchino_Alpha",
+            "UI_NameCardPic_Arlecchino_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210196": {
+        "nameTextMapHash": 3853344316,
+        "icon": "UI_NameCardIcon_Deep",
+        "picPath": [
+            "UI_NameCardPic_Deep_Alpha",
+            "UI_NameCardPic_Deep_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210197": {
+        "nameTextMapHash": 1686874332,
+        "icon": "UI_NameCardIcon_Tzz9",
+        "picPath": [
+            "UI_NameCardPic_Tzz9_Alpha",
+            "UI_NameCardPic_Tzz9_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210198": {
+        "nameTextMapHash": 328422540,
+        "icon": "UI_NameCardIcon_WishingPond",
+        "picPath": [
+            "UI_NameCardPic_WishingPond_Alpha",
+            "UI_NameCardPic_WishingPond_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
+    },
+    "210199": {
+        "nameTextMapHash": 1744889084,
+        "icon": "UI_NameCardIcon_GreatFestivalV2",
+        "picPath": [
+            "UI_NameCardPic_GreatFestivalV2_Alpha",
+            "UI_NameCardPic_GreatFestivalV2_P"
+        ],
+        "rankLevel": 4,
+        "materialType": "MATERIAL_NAMECARD"
     }
 }
