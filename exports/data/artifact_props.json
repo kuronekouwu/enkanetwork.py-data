@@ -442,7 +442,7 @@
     "301031": {
         "propType": "FIGHT_PROP_HP_PERCENT",
         "propDigit": "PERCENT",
-        "propValue": 2.4
+        "propValue": 2.5
     },
     "301032": {
         "propType": "FIGHT_PROP_HP_PERCENT",
@@ -452,7 +452,7 @@
     "301033": {
         "propType": "FIGHT_PROP_HP_PERCENT",
         "propDigit": "PERCENT",
-        "propValue": 3.2
+        "propValue": 3.1
     },
     "301034": {
         "propType": "FIGHT_PROP_HP_PERCENT",
@@ -612,7 +612,7 @@
     "301061": {
         "propType": "FIGHT_PROP_ATTACK_PERCENT",
         "propDigit": "PERCENT",
-        "propValue": 2.4
+        "propValue": 2.5
     },
     "301062": {
         "propType": "FIGHT_PROP_ATTACK_PERCENT",
@@ -622,7 +622,7 @@
     "301063": {
         "propType": "FIGHT_PROP_ATTACK_PERCENT",
         "propDigit": "PERCENT",
-        "propValue": 3.2
+        "propValue": 3.1
     },
     "301064": {
         "propType": "FIGHT_PROP_ATTACK_PERCENT",
@@ -1032,7 +1032,7 @@
     "201203": {
         "propType": "FIGHT_PROP_CRITICAL",
         "propDigit": "PERCENT",
-        "propValue": 1.5
+        "propValue": 1.6
     },
     "301201": {
         "propType": "FIGHT_PROP_CRITICAL",
@@ -1097,7 +1097,7 @@
     "101221": {
         "propType": "FIGHT_PROP_CRITICAL_HURT",
         "propDigit": "PERCENT",
-        "propValue": 1.5
+        "propValue": 1.6
     },
     "101222": {
         "propType": "FIGHT_PROP_CRITICAL_HURT",
@@ -1187,7 +1187,7 @@
     "999002": {
         "propType": "FIGHT_PROP_CRITICAL",
         "propDigit": "PERCENT",
-        "propValue": 100.0
+        "propValue": 100
     },
     "999003": {
         "propType": "FIGHT_PROP_ATTACK",
@@ -1492,7 +1492,7 @@
     "967001": {
         "propType": "FIGHT_PROP_CRITICAL",
         "propDigit": "PERCENT",
-        "propValue": 100.0
+        "propValue": 100
     },
     "966001": {
         "propType": "FIGHT_PROP_ELEMENT_MASTERY",
@@ -2042,7 +2042,7 @@
     "947003": {
         "propType": "FIGHT_PROP_DEFENSE_PERCENT",
         "propDigit": "PERCENT",
-        "propValue": 4.9
+        "propValue": 5.0
     },
     "947004": {
         "propType": "FIGHT_PROP_CRITICAL",

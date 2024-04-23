@@ -1862,5 +1862,25 @@
             945,
             946
         ]
+    },
+    "10000096": {
+        "nameTextMapHash": 167199474,
+        "iconName": "UI_AvatarIcon_Arlecchino",
+        "sideIconName": "UI_AvatarIcon_Side_Arlecchino",
+        "qualityType": "QUALITY_ORANGE",
+        "costElemType": "Fire",
+        "skills": [
+            10961,
+            10962,
+            10965
+        ],
+        "talents": [
+            961,
+            962,
+            963,
+            964,
+            965,
+            966
+        ]
     }
 }
